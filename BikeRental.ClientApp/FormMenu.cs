@@ -21,5 +21,15 @@ namespace BikeRental.ClientApp
         {
             System.Windows.Forms.Application.Restart();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormMenu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
