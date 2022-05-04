@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class DatabaseCreated : DbMigration
+    public partial class filesUpdated : DbMigration
     {
         public override void Up()
         {
@@ -45,8 +45,8 @@
                         Name = c.String(nullable: false, maxLength: 200),
                         Surname = c.String(nullable: false, maxLength: 200),
                         Phone = c.String(nullable: false, maxLength: 200),
-                        Adress = c.String(maxLength: 200),
-                        UserType = c.Int(nullable: false),
+                        Address = c.String(maxLength: 200),
+                        UserType = c.String(),
                     })
                 .PrimaryKey(t => t.UserID);
             
@@ -76,7 +76,7 @@
                     })
                 .PrimaryKey(t => t.RepairID)
                 .ForeignKey("dbo.Bikes", t => t.BikeID, cascadeDelete: true)
-                .ForeignKey("dbo.RepairOrders", t => t.RepairOrderID, cascadeDelete: true)
+                .ForeignKey("dbo.RepairOrders", t => t.RepairOrderID, cascadeDelete: false)
                 .ForeignKey("dbo.Users", t => t.UserID, cascadeDelete: true)
                 .Index(t => t.RepairOrderID)
                 .Index(t => t.UserID)

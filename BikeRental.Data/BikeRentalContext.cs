@@ -1,7 +1,7 @@
 ﻿using System.Data.Entity;
 using BikeRental.Data.Entities;
 
-namespace ContractorMng.Data
+namespace BikeRental.Data
 {
     public class BikeRentalContext : DbContext
     {
@@ -13,7 +13,7 @@ namespace ContractorMng.Data
 
         public BikeRentalContext() : base("name=BikeRentalDb")
         {
-            //Database.SetInitializer<ContractorContext>(new DropCreateDatabaseAlways<ContractorContext>());
+            //Database.SetInitializer<BikeRentalContext>(new DropCreateDatabaseAlways<BikeRentalContext>());
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

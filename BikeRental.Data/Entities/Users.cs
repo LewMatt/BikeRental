@@ -36,9 +36,9 @@ namespace BikeRental.Data.Entities
         public string Phone { get; set; }
 
         [StringLength(200)]
-        public string Adress { get; set; }
+        public string Address { get; set; }
 
-        public int UserType { get; set; }
+        public string UserType { get; set; }
 
 
     }
