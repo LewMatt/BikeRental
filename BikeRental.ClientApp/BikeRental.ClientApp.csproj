@@ -89,6 +89,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControlBorrowed.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlBorrowed.Designer.cs">
+      <DependentUpon>UserControlBorrowed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlCatalog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlCatalog.Designer.cs">
+      <DependentUpon>UserControlCatalog.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,6 +122,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserControlBorrowed.resx">
+      <DependentUpon>UserControlBorrowed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlCatalog.resx">
+      <DependentUpon>UserControlCatalog.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Connected Services\BikeRentalService\service.wsdl" />
     <None Include="Connected Services\BikeRentalService\service.xsd">
       <SubType>Designer</SubType>
