@@ -16,5 +16,10 @@ namespace BikeRental.ClientApp
         {
             InitializeComponent();
         }
+
+        private void userControlCatalog3_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

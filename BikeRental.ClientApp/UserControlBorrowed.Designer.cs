@@ -34,7 +34,7 @@
             // labelBorrowed
             // 
             this.labelBorrowed.AutoSize = true;
-            this.labelBorrowed.Location = new System.Drawing.Point(256, 42);
+            this.labelBorrowed.Location = new System.Drawing.Point(228, 39);
             this.labelBorrowed.Name = "labelBorrowed";
             this.labelBorrowed.Size = new System.Drawing.Size(102, 13);
             this.labelBorrowed.TabIndex = 0;
