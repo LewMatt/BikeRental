@@ -26,7 +26,7 @@ namespace BikeRental.ClientApp
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            //client.Login(textBoxLogin.Text, textBoxPassword.Text);
+           client.Login(textBoxLogin.Text, textBoxPassword.Text);
         }
     }
 }

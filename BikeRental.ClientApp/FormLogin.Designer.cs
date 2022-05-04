@@ -29,6 +29,7 @@ namespace BikeRental.ClientApp
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.buttonReturn = new System.Windows.Forms.Button();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,9 +40,10 @@ namespace BikeRental.ClientApp
             // 
             // buttonReturn
             // 
-            this.buttonReturn.Location = new System.Drawing.Point(634, 374);
+            this.buttonReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.buttonReturn.Location = new System.Drawing.Point(574, 485);
             this.buttonReturn.Name = "buttonReturn";
-            this.buttonReturn.Size = new System.Drawing.Size(75, 23);
+            this.buttonReturn.Size = new System.Drawing.Size(116, 45);
             this.buttonReturn.TabIndex = 11;
             this.buttonReturn.Text = "Wróć";
             this.buttonReturn.UseVisualStyleBackColor = true;
@@ -49,9 +51,10 @@ namespace BikeRental.ClientApp
             // 
             // buttonLogin
             // 
-            this.buttonLogin.Location = new System.Drawing.Point(293, 267);
+            this.buttonLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.buttonLogin.Location = new System.Drawing.Point(299, 379);
             this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(75, 23);
+            this.buttonLogin.Size = new System.Drawing.Size(108, 42);
             this.buttonLogin.TabIndex = 10;
             this.buttonLogin.Text = "Zaloguj";
             this.buttonLogin.UseVisualStyleBackColor = true;
@@ -60,40 +63,48 @@ namespace BikeRental.ClientApp
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(202, 179);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 15F);
+            this.label2.Location = new System.Drawing.Point(256, 320);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 13);
+            this.label2.Size = new System.Drawing.Size(61, 26);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Haslo";
+            this.label2.Text = "Hasło";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(202, 114);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(257, 268);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 13);
+            this.label1.Size = new System.Drawing.Size(60, 26);
             this.label1.TabIndex = 8;
             this.label1.Text = "Login";
             // 
             // textBoxPassword
             // 
-            this.textBoxPassword.Location = new System.Drawing.Point(293, 179);
+            this.textBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.textBoxPassword.Location = new System.Drawing.Point(328, 317);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(100, 20);
+            this.textBoxPassword.Size = new System.Drawing.Size(100, 29);
             this.textBoxPassword.TabIndex = 7;
             // 
             // textBoxLogin
             // 
-            this.textBoxLogin.Location = new System.Drawing.Point(293, 114);
+            this.textBoxLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.textBoxLogin.Location = new System.Drawing.Point(328, 266);
             this.textBoxLogin.Name = "textBoxLogin";
-            this.textBoxLogin.Size = new System.Drawing.Size(100, 20);
+            this.textBoxLogin.Size = new System.Drawing.Size(100, 29);
             this.textBoxLogin.TabIndex = 6;
             // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(702, 551);
             this.ControlBox = false;
             this.Controls.Add(this.buttonReturn);
             this.Controls.Add(this.buttonLogin);
