@@ -11,6 +11,9 @@ namespace BikeRental.Service
 
         [OperationContract]
         string Login(string login, string password);
+
+        [OperationContract]
+        void AddBike(string brand, string model, string type, string color);
     }
 }
  

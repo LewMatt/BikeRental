@@ -26,6 +26,12 @@ namespace BikeRental.ClientApp.BikeRentalService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/Login", ReplyAction="http://tempuri.org/IBikeRentalService/LoginResponse")]
         System.Threading.Tasks.Task<string> LoginAsync(string login, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/AddBike", ReplyAction="http://tempuri.org/IBikeRentalService/AddBikeResponse")]
+        void AddBike(string brand, string model, string type, string color);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/AddBike", ReplyAction="http://tempuri.org/IBikeRentalService/AddBikeResponse")]
+        System.Threading.Tasks.Task AddBikeAsync(string brand, string model, string type, string color);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -69,6 +75,14 @@ namespace BikeRental.ClientApp.BikeRentalService {
         
         public System.Threading.Tasks.Task<string> LoginAsync(string login, string password) {
             return base.Channel.LoginAsync(login, password);
+        }
+        
+        public void AddBike(string brand, string model, string type, string color) {
+            base.Channel.AddBike(brand, model, type, color);
+        }
+        
+        public System.Threading.Tasks.Task AddBikeAsync(string brand, string model, string type, string color) {
+            return base.Channel.AddBikeAsync(brand, model, type, color);
         }
     }
 }

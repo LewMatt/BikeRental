@@ -75,9 +75,38 @@ namespace BikeRental.Data.Repositories
             return userLogged;
         }
 
+        public int GetNumberOfBikes()
+        {
+            int numberOfBikes = 0;
+
+            using (var context = _bikeRentalContext ?? new BikeRentalContext())
+            {
+                numberOfBikes = context.Bikes.Count();
+            }
+
+            return numberOfBikes;
+        }
+
         public void AddBike(string brand, string model, string type, string color)
         {
-              
+            int numberOfBikes = GetNumberOfBikes();
+            int newBikeID = numberOfBikes + 1;
+
+            using (var context = _bikeRentalContext ?? new BikeRentalContext())
+            {
+                var bike = new Bikes
+                {
+                    BikeID = newBikeID,
+                    Brand = brand,
+                    Model = model,
+                    Type = type,
+                    Color = color
+                };
+
+                context.Bikes.Add(bike);
+
+                context.SaveChanges();
+            }
         }
 
     }

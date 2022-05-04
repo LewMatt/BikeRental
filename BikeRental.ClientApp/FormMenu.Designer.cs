@@ -72,6 +72,7 @@ namespace BikeRental.ClientApp
             this.buttonBikeCatalog.TabIndex = 2;
             this.buttonBikeCatalog.Text = "Katalog Rowerów";
             this.buttonBikeCatalog.UseVisualStyleBackColor = true;
+            this.buttonBikeCatalog.Click += new System.EventHandler(this.buttonBikeCatalog_Click);
             // 
             // buttonBorrowedBikes
             // 
@@ -81,6 +82,7 @@ namespace BikeRental.ClientApp
             this.buttonBorrowedBikes.TabIndex = 3;
             this.buttonBorrowedBikes.Text = "Moje Wypożyczenia";
             this.buttonBorrowedBikes.UseVisualStyleBackColor = true;
+            this.buttonBorrowedBikes.Click += new System.EventHandler(this.buttonBorrowedBikes_Click);
             // 
             // panel1
             // 

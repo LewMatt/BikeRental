@@ -32,4 +32,19 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="AddBike">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="brand" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="model" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="color" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddBikeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

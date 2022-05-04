@@ -23,5 +23,12 @@ namespace BikeRental.Service
 
             return bikeRentalRepository.Login(login, password);
         }
+
+        public void AddBike(string brand, string model, string type, string color)
+        {
+            IBikeRentalRepository bikeRentalRepository = new BikeRentalRepository();
+
+            bikeRentalRepository.AddBike(brand, model, type, color);
+        }
     }
 }
