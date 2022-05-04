@@ -25,7 +25,7 @@ namespace BikeRental.Service
         void ReturnBike(int bikeID);
 
         [OperationContract]
-        void AddRepairOrder(int bikeID, string description);
+        void AddRepairOrder(int bikeID, string description); 
     }
 }
  
