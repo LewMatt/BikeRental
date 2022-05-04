@@ -67,7 +67,6 @@ namespace BikeRental.Data.Repositories
                     return user.Login;
                 }
 
-                
             }
         }
 
@@ -115,7 +114,8 @@ namespace BikeRental.Data.Repositories
                     Brand = brand,
                     Model = model,
                     Type = type,
-                    Color = color
+                    Color = color,
+                    IsAvailable = 1
                 };
 
                 context.Bikes.Add(bike);
@@ -156,11 +156,15 @@ namespace BikeRental.Data.Repositories
                    UserID = userID,
                    BikeID = bikeID,
                    Price = price,
-                   ExpirationDate = returnDateStr,
-                   IsAvailable = 0
+                   ExpirationDate = returnDateStr
                 };
 
+
                 context.Rents.Add(rent);
+
+                Bikes bike = context.Bikes.Single(b => b.BikeID == bikeID);
+
+                bike.IsAvailable = 0;
 
                 context.SaveChanges();
             }
@@ -176,6 +180,50 @@ namespace BikeRental.Data.Repositories
             }
 
             return userID;
+        }
+
+        public void ReturnBike(int bikeID)
+        {
+            using (var context = _bikeRentalContext ?? new BikeRentalContext())
+            {
+                Bikes bike = context.Bikes.Single(b => b.BikeID == bikeID);
+
+                bike.IsAvailable = 1;
+
+                context.SaveChanges();
+            }
+        }
+
+        public int GetNumberOfRepairOrders()
+        {
+            int numberOfRepairOrders = 0;
+
+            using (var context = _bikeRentalContext ?? new BikeRentalContext())
+            {
+                numberOfRepairOrders = context.RepairOrders.Count();
+            }
+
+            return numberOfRepairOrders;
+        }
+
+        public void AddRepairOrder(int bikeID, string description)
+        {
+            int numberOfRepairOrders = GetNumberOfRepairOrders();
+            int newRepairOrderID = numberOfRepairOrders + 1;
+
+            using (var context = _bikeRentalContext ?? new BikeRentalContext())
+            {
+                var repairOrder = new RepairOrders
+                {
+                    RepairOrderID = newRepairOrderID,
+                    BikeID = bikeID,
+                    Description = description
+                };
+
+                context.RepairOrders.Add(repairOrder);
+
+                context.SaveChanges();
+            }
         }
 
     }
