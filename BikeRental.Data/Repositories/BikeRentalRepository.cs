@@ -5,7 +5,7 @@ using BikeRental.Data.Entities;
 
 namespace BikeRental.Data.Repositories
 {
-    class BikeRentalRepository : IBikeRentalRepository
+    public class BikeRentalRepository : IBikeRentalRepository
     {
         private readonly BikeRentalContext _bikeRentalContext;
 
@@ -33,7 +33,8 @@ namespace BikeRental.Data.Repositories
 
         public void AddUser(string login, string password, string name, string surname, string phone, string address)
         {
-            int newUserID = GetNumberOfUsers();
+            int numberOfUsers = GetNumberOfUsers();
+            int newUserID = numberOfUsers + 1;
 
             using (var context = _bikeRentalContext ?? new BikeRentalContext())
             {
