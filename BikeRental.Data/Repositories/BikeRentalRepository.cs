@@ -67,7 +67,6 @@ namespace BikeRental.Data.Repositories
                     return user.Login;
                 }
 
-                
             }
         }
 
