@@ -31,28 +31,42 @@ namespace BikeRental.Data.Repositories
             return numberOfUsers;
         }
 
-        public void AddUser(string login, string password, string name, string surname, string phone, string address)
+        public string AddUser(string login, string password, string name, string surname, string phone, string address)
         {
             int numberOfUsers = GetNumberOfUsers();
             int newUserID = numberOfUsers + 1;
 
             using (var context = _bikeRentalContext ?? new BikeRentalContext())
             {
-                var user = new Users
+
+                var isLoginAvailable = context.Users.Where(u => u.Login == login).FirstOrDefault();
+
+                if(isLoginAvailable != null)
                 {
-                    UserID = newUserID,
-                    Login = login,
-                    Password = password,
-                    Name = name,
-                    Surname = surname,
-                    Phone = phone,
-                    Address = address,
-                    UserType = "user"
-                };
+                    return "";
+                }
+                else
+                {
+                    var user = new Users
+                    {
+                        UserID = newUserID,
+                        Login = login,
+                        Password = password,
+                        Name = name,
+                        Surname = surname,
+                        Phone = phone,
+                        Address = address,
+                        UserType = "user"
+                    };
 
-                context.Users.Add(user);
+                    context.Users.Add(user);
 
-                context.SaveChanges();
+                    context.SaveChanges();
+
+                    return user.Login;
+                }
+
+                
             }
         }
 
@@ -104,6 +118,42 @@ namespace BikeRental.Data.Repositories
                 };
 
                 context.Bikes.Add(bike);
+
+                context.SaveChanges();
+            }
+        }
+
+        public int GetNumberOfRents()
+        {
+            int numberOfRents = 0;
+
+            using (var context = _bikeRentalContext ?? new BikeRentalContext())
+            {
+                numberOfRents = context.Rents.Count();
+            }
+
+            return numberOfRents;
+        }
+
+        public void AddRent(int userID, int bikeID, int price, string expirationDate)
+        {
+
+            int numberOfRents = GetNumberOfRents();
+            int newRentID = numberOfRents + 1;
+
+            using (var context = _bikeRentalContext ?? new BikeRentalContext())
+            {
+                var rent = new Rents
+                {
+                   RentID = numberOfRents,
+                   UserID = userID,
+                   BikeID = bikeID,
+                   Price = price,
+                   ExpirationDate = expirationDate,
+                   IsAvailable = 0
+                };
+
+                context.Rents.Add(rent);
 
                 context.SaveChanges();
             }

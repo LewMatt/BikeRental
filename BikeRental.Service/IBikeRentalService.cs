@@ -7,13 +7,16 @@ namespace BikeRental.Service
     public interface IBikeRentalService
     {
         [OperationContract]
-        void AddUser(string login, string password, string name, string surname, string phone, string address);
+        string AddUser(string login, string password, string name, string surname, string phone, string address);
 
         [OperationContract]
         string Login(string login, string password);
 
         [OperationContract]
         void AddBike(string brand, string model, string type, string color);
+
+        [OperationContract]
+        void AddRent(int userID, int bikeID, int price, string expirationDate);
     }
 }
  

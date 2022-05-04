@@ -25,11 +25,19 @@ namespace BikeRental.ClientApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            client.AddUser(textBoxLogin.Text, textBoxPassword.Text, textBoxName.Text, textBoxSurname.Text, textBoxPhone.Text, textBoxAddress.Text);
+            var user = client.AddUser(textBoxLogin.Text, textBoxPassword.Text, textBoxName.Text, textBoxSurname.Text, textBoxPhone.Text, textBoxAddress.Text);
 
-            MessageBox.Show("Zarejestrowano.");
+            if(user == "")
+            {
+                MessageBox.Show("Uzytkownik o takim loginie juz istnieje.");
+            }
+            else
+            {
+                MessageBox.Show("Zarejestrowano.");
 
-            System.Windows.Forms.Application.Restart();
+                System.Windows.Forms.Application.Restart();
+            }
+            
         }
 
         private void buttonReturn_Click(object sender, EventArgs e)

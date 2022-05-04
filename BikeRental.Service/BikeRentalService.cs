@@ -9,11 +9,11 @@ namespace BikeRental.Service
 {
     public class BikeRentalService : IBikeRentalService
     {
-        public void AddUser(string login, string password, string name, string surname, string phone, string address)
+        public string AddUser(string login, string password, string name, string surname, string phone, string address)
         {
             IBikeRentalRepository bikeRentalRepository = new BikeRentalRepository();
 
-            bikeRentalRepository.AddUser(login, password, name, surname, phone, address);
+            return bikeRentalRepository.AddUser(login, password, name, surname, phone, address);
 
         }
 
@@ -29,6 +29,13 @@ namespace BikeRental.Service
             IBikeRentalRepository bikeRentalRepository = new BikeRentalRepository();
 
             bikeRentalRepository.AddBike(brand, model, type, color);
+        }
+
+        public void AddRent(int userID, int bikeID, int price, string expirationDate)
+        {
+            IBikeRentalRepository bikeRentalRepository = new BikeRentalRepository();
+
+            bikeRentalRepository.AddRent(userID, bikeID, price, expirationDate);
         }
     }
 }

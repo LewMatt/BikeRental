@@ -16,10 +16,10 @@ namespace BikeRental.ClientApp.BikeRentalService {
     public interface IBikeRentalService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/AddUser", ReplyAction="http://tempuri.org/IBikeRentalService/AddUserResponse")]
-        void AddUser(string login, string password, string name, string surname, string phone, string address);
+        string AddUser(string login, string password, string name, string surname, string phone, string address);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/AddUser", ReplyAction="http://tempuri.org/IBikeRentalService/AddUserResponse")]
-        System.Threading.Tasks.Task AddUserAsync(string login, string password, string name, string surname, string phone, string address);
+        System.Threading.Tasks.Task<string> AddUserAsync(string login, string password, string name, string surname, string phone, string address);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/Login", ReplyAction="http://tempuri.org/IBikeRentalService/LoginResponse")]
         string Login([System.ServiceModel.MessageParameterAttribute(Name="login")] string login1, string password);
@@ -61,11 +61,11 @@ namespace BikeRental.ClientApp.BikeRentalService {
                 base(binding, remoteAddress) {
         }
         
-        public void AddUser(string login, string password, string name, string surname, string phone, string address) {
-            base.Channel.AddUser(login, password, name, surname, phone, address);
+        public string AddUser(string login, string password, string name, string surname, string phone, string address) {
+            return base.Channel.AddUser(login, password, name, surname, phone, address);
         }
         
-        public System.Threading.Tasks.Task AddUserAsync(string login, string password, string name, string surname, string phone, string address) {
+        public System.Threading.Tasks.Task<string> AddUserAsync(string login, string password, string name, string surname, string phone, string address) {
             return base.Channel.AddUserAsync(login, password, name, surname, phone, address);
         }
         
