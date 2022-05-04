@@ -66,7 +66,7 @@ namespace BikeRental.ClientApp
             // 
             // buttonBikeCatalog
             // 
-            this.buttonBikeCatalog.Location = new System.Drawing.Point(14, 44);
+            this.buttonBikeCatalog.Location = new System.Drawing.Point(12, 139);
             this.buttonBikeCatalog.Name = "buttonBikeCatalog";
             this.buttonBikeCatalog.Size = new System.Drawing.Size(180, 76);
             this.buttonBikeCatalog.TabIndex = 2;
@@ -75,7 +75,7 @@ namespace BikeRental.ClientApp
             // 
             // buttonBorrowedBikes
             // 
-            this.buttonBorrowedBikes.Location = new System.Drawing.Point(14, 137);
+            this.buttonBorrowedBikes.Location = new System.Drawing.Point(12, 232);
             this.buttonBorrowedBikes.Name = "buttonBorrowedBikes";
             this.buttonBorrowedBikes.Size = new System.Drawing.Size(180, 76);
             this.buttonBorrowedBikes.TabIndex = 3;
