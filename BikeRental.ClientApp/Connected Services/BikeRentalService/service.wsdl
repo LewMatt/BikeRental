@@ -12,16 +12,35 @@
   <wsdl:message name="IBikeRentalService_AddUser_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddUserResponse" />
   </wsdl:message>
+  <wsdl:message name="IBikeRentalService_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IBikeRentalService_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
   <wsdl:portType name="IBikeRentalService">
     <wsdl:operation name="AddUser">
       <wsdl:input wsaw:Action="http://tempuri.org/IBikeRentalService/AddUser" message="tns:IBikeRentalService_AddUser_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IBikeRentalService/AddUserResponse" message="tns:IBikeRentalService_AddUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBikeRentalService/Login" message="tns:IBikeRentalService_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBikeRentalService/LoginResponse" message="tns:IBikeRentalService_Login_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IBikeRentalService" type="tns:IBikeRentalService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="AddUser">
       <soap:operation soapAction="http://tempuri.org/IBikeRentalService/AddUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IBikeRentalService/Login" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

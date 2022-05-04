@@ -28,6 +28,8 @@ namespace BikeRental.ClientApp
             client.AddUser(textBoxLogin.Text, textBoxPassword.Text, textBoxName.Text, textBoxSurname.Text, textBoxPhone.Text, textBoxAddress.Text);
 
             MessageBox.Show("Zarejestrowano.");
+
+            System.Windows.Forms.Application.Restart();
         }
 
         private void buttonReturn_Click(object sender, EventArgs e)

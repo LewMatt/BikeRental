@@ -30,6 +30,7 @@ namespace BikeRental.ClientApp
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonLogOut = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -41,12 +42,23 @@ namespace BikeRental.ClientApp
             this.label1.TabIndex = 0;
             this.label1.Text = "Menu";
             // 
+            // buttonLogOut
+            // 
+            this.buttonLogOut.Location = new System.Drawing.Point(697, 391);
+            this.buttonLogOut.Name = "buttonLogOut";
+            this.buttonLogOut.Size = new System.Drawing.Size(75, 23);
+            this.buttonLogOut.TabIndex = 1;
+            this.buttonLogOut.Text = "Wyloguj";
+            this.buttonLogOut.UseVisualStyleBackColor = true;
+            this.buttonLogOut.Click += new System.EventHandler(this.buttonLogOut_Click);
+            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
+            this.Controls.Add(this.buttonLogOut);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormMenu";
@@ -59,5 +71,6 @@ namespace BikeRental.ClientApp
         #endregion
 
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonLogOut;
     }
 }
