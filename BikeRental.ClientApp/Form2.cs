@@ -29,5 +29,10 @@ namespace BikeRental.ClientApp
 
             MessageBox.Show("Zarejestrowano.");
         }
+
+        private void buttonReturn_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Restart();
+        }
     }
 }

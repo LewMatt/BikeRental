@@ -41,6 +41,7 @@
             this.textBoxPhone = new System.Windows.Forms.TextBox();
             this.textBoxAddress = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.buttonReturn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -150,11 +151,22 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // buttonReturn
+            // 
+            this.buttonReturn.Location = new System.Drawing.Point(704, 405);
+            this.buttonReturn.Name = "buttonReturn";
+            this.buttonReturn.Size = new System.Drawing.Size(75, 23);
+            this.buttonReturn.TabIndex = 13;
+            this.buttonReturn.Text = "Wróć";
+            this.buttonReturn.UseVisualStyleBackColor = true;
+            this.buttonReturn.Click += new System.EventHandler(this.buttonReturn_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonReturn);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBoxAddress);
             this.Controls.Add(this.textBoxPhone);
@@ -168,6 +180,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form2";
             this.Text = "Form2";
             this.ResumeLayout(false);
@@ -190,5 +203,6 @@
         private System.Windows.Forms.TextBox textBoxPhone;
         private System.Windows.Forms.TextBox textBoxAddress;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonReturn;
     }
 }
