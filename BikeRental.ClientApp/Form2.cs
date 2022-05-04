@@ -27,6 +27,7 @@ namespace BikeRental.ClientApp
         {
             client.AddUser(textBoxLogin.Text, textBoxPassword.Text, textBoxName.Text, textBoxSurname.Text, textBoxPhone.Text, textBoxAddress.Text);
 
+            MessageBox.Show("Zarejestrowano.");
         }
     }
 }

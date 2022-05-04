@@ -24,9 +24,11 @@ namespace BikeRental.ClientApp
             
         }
 
-        
-
-        
-
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //this.Hide();
+            Form2 formRegister = new Form2();
+            formRegister.Show();
+        }
     }
 }
