@@ -77,7 +77,7 @@ namespace BikeRental.Data.Repositories
 
         public void AddBike(string brand, string model, string type, string color)
         {
-             
+              
         }
 
     }
