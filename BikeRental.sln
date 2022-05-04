@@ -8,6 +8,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BikeRental.Service", "BikeRental.Service\BikeRental.Service.csproj", "{2A2C11E3-D2F5-4E36-B817-6CCF71F8D412}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BikeRental.ClientApp", "BikeRental.ClientApp\BikeRental.ClientApp.csproj", "{83B51A9F-5343-413F-82C3-55BFF09B9099}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2A2C11E3-D2F5-4E36-B817-6CCF71F8D412} = {2A2C11E3-D2F5-4E36-B817-6CCF71F8D412}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

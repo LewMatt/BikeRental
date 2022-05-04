@@ -12,6 +12,7 @@ namespace BikeRental.ClientApp
 {
     public partial class Form2 : Form
     {
+        BikeRentalService.BikeRentalServiceClient client = new BikeRentalService.BikeRentalServiceClient();
         public Form2()
         {
             InitializeComponent();
@@ -19,6 +20,12 @@ namespace BikeRental.ClientApp
 
         private void label1_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            client.AddUser(textBoxLogin.Text, textBoxPassword.Text, textBoxName.Text, textBoxSurname.Text, textBoxPhone.Text, textBoxAddress.Text);
 
         }
     }
