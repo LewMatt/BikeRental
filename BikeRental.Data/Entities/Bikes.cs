@@ -28,6 +28,6 @@ namespace BikeRental.Data.Entities
         [StringLength(200)]
         public string Color { get; set; }
 
-
+        public int IsAvailable { get; set; }
     }
 }

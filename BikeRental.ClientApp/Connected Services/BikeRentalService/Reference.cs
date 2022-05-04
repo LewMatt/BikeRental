@@ -44,6 +44,18 @@ namespace BikeRental.ClientApp.BikeRentalService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/GetUserID", ReplyAction="http://tempuri.org/IBikeRentalService/GetUserIDResponse")]
         System.Threading.Tasks.Task<int> GetUserIDAsync(string login);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/ReturnBike", ReplyAction="http://tempuri.org/IBikeRentalService/ReturnBikeResponse")]
+        void ReturnBike(int bikeID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/ReturnBike", ReplyAction="http://tempuri.org/IBikeRentalService/ReturnBikeResponse")]
+        System.Threading.Tasks.Task ReturnBikeAsync(int bikeID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/AddRepairOrder", ReplyAction="http://tempuri.org/IBikeRentalService/AddRepairOrderResponse")]
+        void AddRepairOrder(int bikeID, string description);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/AddRepairOrder", ReplyAction="http://tempuri.org/IBikeRentalService/AddRepairOrderResponse")]
+        System.Threading.Tasks.Task AddRepairOrderAsync(int bikeID, string description);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -111,6 +123,22 @@ namespace BikeRental.ClientApp.BikeRentalService {
         
         public System.Threading.Tasks.Task<int> GetUserIDAsync(string login) {
             return base.Channel.GetUserIDAsync(login);
+        }
+        
+        public void ReturnBike(int bikeID) {
+            base.Channel.ReturnBike(bikeID);
+        }
+        
+        public System.Threading.Tasks.Task ReturnBikeAsync(int bikeID) {
+            return base.Channel.ReturnBikeAsync(bikeID);
+        }
+        
+        public void AddRepairOrder(int bikeID, string description) {
+            base.Channel.AddRepairOrder(bikeID, description);
+        }
+        
+        public System.Threading.Tasks.Task AddRepairOrderAsync(int bikeID, string description) {
+            return base.Channel.AddRepairOrderAsync(bikeID, description);
         }
     }
 }

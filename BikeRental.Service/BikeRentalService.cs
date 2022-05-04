@@ -44,5 +44,19 @@ namespace BikeRental.Service
 
             return bikeRentalRepository.GetUserID(login);
         }
+
+        public void ReturnBike(int bikeID)
+        {
+            IBikeRentalRepository bikeRentalRepository = new BikeRentalRepository();
+
+            bikeRentalRepository.ReturnBike(bikeID);
+        }
+
+        public void AddRepairOrder(int bikeID, string description)
+        {
+            IBikeRentalRepository bikeRentalRepository = new BikeRentalRepository();
+
+            bikeRentalRepository.AddRepairOrder(bikeID, description);
+        }
     }
 }

@@ -28,7 +28,6 @@ namespace BikeRental.Data.Entities
         [StringLength(200)]
         public string ExpirationDate { get; set; }
 
-        public int IsAvailable { get; set; }
 
     }
 }
