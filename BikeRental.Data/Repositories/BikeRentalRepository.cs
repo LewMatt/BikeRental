@@ -75,5 +75,10 @@ namespace BikeRental.Data.Repositories
             return userLogged;
         }
 
+        public void AddBike(string brand, string model, string type, string color)
+        {
+             
+        }
+
     }
 }
