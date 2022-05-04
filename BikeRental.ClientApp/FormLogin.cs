@@ -26,19 +26,7 @@ namespace BikeRental.ClientApp
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            string login = client.Login(textBoxLogin.Text, textBoxPassword.Text);
-
-            if(login == "")
-            {
-                MessageBox.Show("Niepoprawny login lub hasło.");
-            }
-            else
-            {
-                MessageBox.Show("Zalogowano.");
-                this.Hide();
-                FormMenu fMenu = new FormMenu();
-                fMenu.Show();
-            }
+           client.Login(textBoxLogin.Text, textBoxPassword.Text);
         }
     }
 }
