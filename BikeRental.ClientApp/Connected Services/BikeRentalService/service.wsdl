@@ -18,6 +18,24 @@
   <wsdl:message name="IBikeRentalService_Login_OutputMessage">
     <wsdl:part name="parameters" element="tns:LoginResponse" />
   </wsdl:message>
+  <wsdl:message name="IBikeRentalService_AddBike_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddBike" />
+  </wsdl:message>
+  <wsdl:message name="IBikeRentalService_AddBike_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddBikeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBikeRentalService_AddRent_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddRent" />
+  </wsdl:message>
+  <wsdl:message name="IBikeRentalService_AddRent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddRentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBikeRentalService_GetUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserID" />
+  </wsdl:message>
+  <wsdl:message name="IBikeRentalService_GetUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserIDResponse" />
+  </wsdl:message>
   <wsdl:portType name="IBikeRentalService">
     <wsdl:operation name="AddUser">
       <wsdl:input wsaw:Action="http://tempuri.org/IBikeRentalService/AddUser" message="tns:IBikeRentalService_AddUser_InputMessage" />
@@ -26,6 +44,18 @@
     <wsdl:operation name="Login">
       <wsdl:input wsaw:Action="http://tempuri.org/IBikeRentalService/Login" message="tns:IBikeRentalService_Login_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IBikeRentalService/LoginResponse" message="tns:IBikeRentalService_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddBike">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBikeRentalService/AddBike" message="tns:IBikeRentalService_AddBike_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBikeRentalService/AddBikeResponse" message="tns:IBikeRentalService_AddBike_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddRent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBikeRentalService/AddRent" message="tns:IBikeRentalService_AddRent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBikeRentalService/AddRentResponse" message="tns:IBikeRentalService_AddRent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBikeRentalService/GetUserID" message="tns:IBikeRentalService_GetUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBikeRentalService/GetUserIDResponse" message="tns:IBikeRentalService_GetUserID_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IBikeRentalService" type="tns:IBikeRentalService">
@@ -41,6 +71,33 @@
     </wsdl:operation>
     <wsdl:operation name="Login">
       <soap:operation soapAction="http://tempuri.org/IBikeRentalService/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddBike">
+      <soap:operation soapAction="http://tempuri.org/IBikeRentalService/AddBike" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRent">
+      <soap:operation soapAction="http://tempuri.org/IBikeRentalService/AddRent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserID">
+      <soap:operation soapAction="http://tempuri.org/IBikeRentalService/GetUserID" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -8,7 +8,13 @@ namespace BikeRental.Data.Repositories
     public interface IBikeRentalRepository
     {
         int GetNumberOfUsers();
-        void AddUser(string login, string password, string name, string surname, string phone, string address);
+        string AddUser(string login, string password, string name, string surname, string phone, string address);
         string Login(string login, string password);
+        int GetNumberOfBikes();
+        void AddBike(string brand, string model, string type, string color);
+        int GetNumberOfRents();
+        void AddRent(int userID, int bikeID, int price);
+        int GetUserID(string login);
+
     }
 }

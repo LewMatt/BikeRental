@@ -37,6 +37,7 @@ namespace BikeRental.ClientApp
                 MessageBox.Show("Zalogowano.");
                 this.Hide();
                 FormMenu fMenu = new FormMenu();
+                fMenu.UserID = client.GetUserID(login);
                 fMenu.Show();
             }
         }

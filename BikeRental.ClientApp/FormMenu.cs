@@ -12,9 +12,11 @@ namespace BikeRental.ClientApp
 {
     public partial class FormMenu : Form
     {
+        public int UserID;
         public FormMenu()
         {
             InitializeComponent();
+            userControlCatalog1.BringToFront();
         }
 
         private void buttonLogOut_Click(object sender, EventArgs e)
@@ -30,6 +32,16 @@ namespace BikeRental.ClientApp
         private void FormMenu_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonBikeCatalog_Click(object sender, EventArgs e)
+        {
+            userControlCatalog1.BringToFront();
+        }
+
+        private void buttonBorrowedBikes_Click(object sender, EventArgs e)
+        {
+            userControlBorrowed1.BringToFront();
         }
     }
 }
