@@ -38,7 +38,7 @@ namespace BikeRental.ClientApp
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button1.Location = new System.Drawing.Point(134, 26);
+            this.button1.Location = new System.Drawing.Point(141, 26);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(148, 73);
             this.button1.TabIndex = 4;
@@ -49,7 +49,7 @@ namespace BikeRental.ClientApp
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button2.Location = new System.Drawing.Point(744, 26);
+            this.button2.Location = new System.Drawing.Point(752, 26);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(148, 73);
             this.button2.TabIndex = 5;
@@ -60,7 +60,7 @@ namespace BikeRental.ClientApp
             // buttonExit
             // 
             this.buttonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.buttonExit.Location = new System.Drawing.Point(823, 565);
+            this.buttonExit.Location = new System.Drawing.Point(873, 578);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(148, 73);
             this.buttonExit.TabIndex = 6;
@@ -73,7 +73,7 @@ namespace BikeRental.ClientApp
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(983, 650);
+            this.ClientSize = new System.Drawing.Size(1043, 673);
             this.ControlBox = false;
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.button2);

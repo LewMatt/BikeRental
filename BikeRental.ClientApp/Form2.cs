@@ -34,5 +34,15 @@ namespace BikeRental.ClientApp
         {
             System.Windows.Forms.Application.Restart();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxAddress_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
