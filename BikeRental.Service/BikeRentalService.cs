@@ -58,5 +58,12 @@ namespace BikeRental.Service
 
             bikeRentalRepository.AddRepairOrder(bikeID, description);
         }
+
+        public void AddRepair(int repairOrderID, int userID, int bikeID, string details, string state, int overallPrice)
+        {
+            IBikeRentalRepository bikeRentalRepository = new BikeRentalRepository();
+
+            bikeRentalRepository.AddRepair(repairOrderID, userID, bikeID, details, state, overallPrice);
+        }
     }
 }

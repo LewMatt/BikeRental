@@ -48,6 +48,12 @@
   <wsdl:message name="IBikeRentalService_AddRepairOrder_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddRepairOrderResponse" />
   </wsdl:message>
+  <wsdl:message name="IBikeRentalService_AddRepair_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddRepair" />
+  </wsdl:message>
+  <wsdl:message name="IBikeRentalService_AddRepair_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddRepairResponse" />
+  </wsdl:message>
   <wsdl:portType name="IBikeRentalService">
     <wsdl:operation name="AddUser">
       <wsdl:input wsaw:Action="http://tempuri.org/IBikeRentalService/AddUser" message="tns:IBikeRentalService_AddUser_InputMessage" />
@@ -76,6 +82,10 @@
     <wsdl:operation name="AddRepairOrder">
       <wsdl:input wsaw:Action="http://tempuri.org/IBikeRentalService/AddRepairOrder" message="tns:IBikeRentalService_AddRepairOrder_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IBikeRentalService/AddRepairOrderResponse" message="tns:IBikeRentalService_AddRepairOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddRepair">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBikeRentalService/AddRepair" message="tns:IBikeRentalService_AddRepair_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBikeRentalService/AddRepairResponse" message="tns:IBikeRentalService_AddRepair_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IBikeRentalService" type="tns:IBikeRentalService">
@@ -136,6 +146,15 @@
     </wsdl:operation>
     <wsdl:operation name="AddRepairOrder">
       <soap:operation soapAction="http://tempuri.org/IBikeRentalService/AddRepairOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRepair">
+      <soap:operation soapAction="http://tempuri.org/IBikeRentalService/AddRepair" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

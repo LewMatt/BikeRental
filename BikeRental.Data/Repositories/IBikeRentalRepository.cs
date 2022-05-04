@@ -17,6 +17,7 @@ namespace BikeRental.Data.Repositories
         int GetUserID(string login);
         void ReturnBike(int bikeID);
         void AddRepairOrder(int bikeID, string description);
+        void AddRepair(int repairOrderID, int userID, int bikeID, string details, string state, int overallPrice);
 
     }
 }

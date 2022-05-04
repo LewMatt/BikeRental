@@ -102,4 +102,21 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
+  <xs:element name="AddRepair">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="repairOrderID" type="xs:int" />
+        <xs:element minOccurs="0" name="userID" type="xs:int" />
+        <xs:element minOccurs="0" name="bikeID" type="xs:int" />
+        <xs:element minOccurs="0" name="details" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="state" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="overallPrice" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddRepairResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

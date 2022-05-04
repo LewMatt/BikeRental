@@ -56,6 +56,12 @@ namespace BikeRental.ClientApp.BikeRentalService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/AddRepairOrder", ReplyAction="http://tempuri.org/IBikeRentalService/AddRepairOrderResponse")]
         System.Threading.Tasks.Task AddRepairOrderAsync(int bikeID, string description);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/AddRepair", ReplyAction="http://tempuri.org/IBikeRentalService/AddRepairResponse")]
+        void AddRepair(int repairOrderID, int userID, int bikeID, string details, string state, int overallPrice);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/AddRepair", ReplyAction="http://tempuri.org/IBikeRentalService/AddRepairResponse")]
+        System.Threading.Tasks.Task AddRepairAsync(int repairOrderID, int userID, int bikeID, string details, string state, int overallPrice);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -139,6 +145,14 @@ namespace BikeRental.ClientApp.BikeRentalService {
         
         public System.Threading.Tasks.Task AddRepairOrderAsync(int bikeID, string description) {
             return base.Channel.AddRepairOrderAsync(bikeID, description);
+        }
+        
+        public void AddRepair(int repairOrderID, int userID, int bikeID, string details, string state, int overallPrice) {
+            base.Channel.AddRepair(repairOrderID, userID, bikeID, details, state, overallPrice);
+        }
+        
+        public System.Threading.Tasks.Task AddRepairAsync(int repairOrderID, int userID, int bikeID, string details, string state, int overallPrice) {
+            return base.Channel.AddRepairAsync(repairOrderID, userID, bikeID, details, state, overallPrice);
         }
     }
 }

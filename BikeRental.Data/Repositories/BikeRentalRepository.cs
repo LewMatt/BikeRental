@@ -226,5 +226,41 @@ namespace BikeRental.Data.Repositories
             }
         }
 
+        public int GetNumberOfRepairs()
+        {
+            int numberOfRepairs = 0;
+
+            using (var context = _bikeRentalContext ?? new BikeRentalContext())
+            {
+                numberOfRepairs = context.Repairs.Count();
+            }
+
+            return numberOfRepairs;
+        }
+
+        public void AddRepair(int repairOrderID,int userID, int bikeID, string details, string state, int overallPrice)
+        {
+            int numberOfRepairs = GetNumberOfRepairs();
+            int newRepairID = numberOfRepairs + 1;
+
+            using (var context = _bikeRentalContext ?? new BikeRentalContext())
+            {
+                var repair = new Repairs
+                {
+                    RepairID = newRepairID,
+                    RepairOrderID = repairOrderID,
+                    UserID = userID,
+                    BikeID = bikeID,
+                    Details = details,
+                    State = state,
+                    OverallPrice = overallPrice
+                };
+
+                context.Repairs.Add(repair);
+
+                context.SaveChanges();
+            }
+        }
+
     }
 }
