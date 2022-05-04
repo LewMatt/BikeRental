@@ -12,6 +12,8 @@ namespace BikeRental.ClientApp
 {
     public partial class FormLogin : Form
     {
+        BikeRentalService.BikeRentalServiceClient client = new BikeRentalService.BikeRentalServiceClient();
+
         public FormLogin()
         {
             InitializeComponent();
@@ -20,6 +22,11 @@ namespace BikeRental.ClientApp
         private void buttonReturn_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.Restart();
+        }
+
+        private void buttonLogin_Click(object sender, EventArgs e)
+        {
+            //client.Login(textBoxLogin.Text, textBoxPassword.Text);
         }
     }
 }

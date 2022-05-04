@@ -16,5 +16,12 @@ namespace BikeRental.Service
             bikeRentalRepository.AddUser(login, password, name, surname, phone, address);
 
         }
+
+        public string Login(string login, string password)
+        {
+            IBikeRentalRepository bikeRentalRepository = new BikeRentalRepository();
+
+            return bikeRentalRepository.Login(login, password);
+        }
     }
 }

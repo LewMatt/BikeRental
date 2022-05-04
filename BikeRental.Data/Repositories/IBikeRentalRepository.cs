@@ -9,5 +9,6 @@ namespace BikeRental.Data.Repositories
     {
         int GetNumberOfUsers();
         void AddUser(string login, string password, string name, string surname, string phone, string address);
+        string Login(string login, string password);
     }
 }

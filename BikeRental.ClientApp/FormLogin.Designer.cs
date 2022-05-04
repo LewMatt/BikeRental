@@ -55,6 +55,7 @@ namespace BikeRental.ClientApp
             this.buttonLogin.TabIndex = 10;
             this.buttonLogin.Text = "Zaloguj";
             this.buttonLogin.UseVisualStyleBackColor = true;
+            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
             // label2
             // 

@@ -8,6 +8,9 @@ namespace BikeRental.Service
     {
         [OperationContract]
         void AddUser(string login, string password, string name, string surname, string phone, string address);
+
+        [OperationContract]
+        string Login(string login, string password);
     }
 }
  

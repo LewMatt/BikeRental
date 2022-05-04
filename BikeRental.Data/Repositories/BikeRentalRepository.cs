@@ -55,5 +55,25 @@ namespace BikeRental.Data.Repositories
                 context.SaveChanges();
             }
         }
+
+        public string Login(string login, string password)
+        {
+            string userLogged = "";
+            using (var context = _bikeRentalContext ?? new BikeRentalContext())
+            {
+                var user = context.Users.Where(u => u.Login == login && u.Password == password).FirstOrDefault();
+                if(user == null)
+                {
+                    userLogged = "";
+                }
+                else
+                {
+                    userLogged = user.Login;
+                }
+            }
+
+            return userLogged;
+        }
+
     }
 }
