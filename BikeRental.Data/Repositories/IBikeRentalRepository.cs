@@ -13,7 +13,8 @@ namespace BikeRental.Data.Repositories
         int GetNumberOfBikes();
         void AddBike(string brand, string model, string type, string color);
         int GetNumberOfRents();
-        void AddRent(int userID, int bikeID, int price, string expirationDate);
+        void AddRent(int userID, int bikeID, int price);
+        int GetUserID(string login);
 
     }
 }

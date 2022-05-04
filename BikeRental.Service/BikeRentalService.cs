@@ -31,11 +31,18 @@ namespace BikeRental.Service
             bikeRentalRepository.AddBike(brand, model, type, color);
         }
 
-        public void AddRent(int userID, int bikeID, int price, string expirationDate)
+        public void AddRent(int userID, int bikeID, int price)
         {
             IBikeRentalRepository bikeRentalRepository = new BikeRentalRepository();
 
-            bikeRentalRepository.AddRent(userID, bikeID, price, expirationDate);
+            bikeRentalRepository.AddRent(userID, bikeID, price);
+        }
+
+        public int GetUserID(string login)
+        {
+            IBikeRentalRepository bikeRentalRepository = new BikeRentalRepository();
+
+            return bikeRentalRepository.GetUserID(login);
         }
     }
 }

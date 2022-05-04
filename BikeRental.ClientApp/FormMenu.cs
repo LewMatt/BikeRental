@@ -12,6 +12,7 @@ namespace BikeRental.ClientApp
 {
     public partial class FormMenu : Form
     {
+        public int UserID;
         public FormMenu()
         {
             InitializeComponent();

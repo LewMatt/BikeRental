@@ -32,6 +32,18 @@ namespace BikeRental.ClientApp.BikeRentalService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/AddBike", ReplyAction="http://tempuri.org/IBikeRentalService/AddBikeResponse")]
         System.Threading.Tasks.Task AddBikeAsync(string brand, string model, string type, string color);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/AddRent", ReplyAction="http://tempuri.org/IBikeRentalService/AddRentResponse")]
+        void AddRent(int userID, int bikeID, int price);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/AddRent", ReplyAction="http://tempuri.org/IBikeRentalService/AddRentResponse")]
+        System.Threading.Tasks.Task AddRentAsync(int userID, int bikeID, int price);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/GetUserID", ReplyAction="http://tempuri.org/IBikeRentalService/GetUserIDResponse")]
+        int GetUserID(string login);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/GetUserID", ReplyAction="http://tempuri.org/IBikeRentalService/GetUserIDResponse")]
+        System.Threading.Tasks.Task<int> GetUserIDAsync(string login);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -83,6 +95,22 @@ namespace BikeRental.ClientApp.BikeRentalService {
         
         public System.Threading.Tasks.Task AddBikeAsync(string brand, string model, string type, string color) {
             return base.Channel.AddBikeAsync(brand, model, type, color);
+        }
+        
+        public void AddRent(int userID, int bikeID, int price) {
+            base.Channel.AddRent(userID, bikeID, price);
+        }
+        
+        public System.Threading.Tasks.Task AddRentAsync(int userID, int bikeID, int price) {
+            return base.Channel.AddRentAsync(userID, bikeID, price);
+        }
+        
+        public int GetUserID(string login) {
+            return base.Channel.GetUserID(login);
+        }
+        
+        public System.Threading.Tasks.Task<int> GetUserIDAsync(string login) {
+            return base.Channel.GetUserIDAsync(login);
         }
     }
 }

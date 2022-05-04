@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using BikeRental.Data.Entities;
@@ -135,11 +136,17 @@ namespace BikeRental.Data.Repositories
             return numberOfRents;
         }
 
-        public void AddRent(int userID, int bikeID, int price, string expirationDate)
+        public void AddRent(int userID, int bikeID, int price)
         {
 
             int numberOfRents = GetNumberOfRents();
             int newRentID = numberOfRents + 1;
+
+            int czas_do_oddania = 1;
+
+            var returnDate = DateTime.Today.AddMonths(czas_do_oddania);
+
+            string returnDateStr = returnDate.ToString("dd MMMM, yyyy");
 
             using (var context = _bikeRentalContext ?? new BikeRentalContext())
             {
@@ -149,7 +156,7 @@ namespace BikeRental.Data.Repositories
                    UserID = userID,
                    BikeID = bikeID,
                    Price = price,
-                   ExpirationDate = expirationDate,
+                   ExpirationDate = returnDateStr,
                    IsAvailable = 0
                 };
 
@@ -157,6 +164,18 @@ namespace BikeRental.Data.Repositories
 
                 context.SaveChanges();
             }
+        }
+
+        public int GetUserID(string login)
+        {
+            int userID = 0;
+
+            using (var context = _bikeRentalContext ?? new BikeRentalContext())
+            {
+                userID = context.Users.Where(u => u.Login == login).FirstOrDefault().UserID;
+            }
+
+            return userID;
         }
 
     }
