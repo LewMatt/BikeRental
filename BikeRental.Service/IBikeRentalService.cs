@@ -13,10 +13,10 @@ namespace BikeRental.Service
         string Login(string login, string password);
 
         [OperationContract]
-        void AddBike(string brand, string model, string type, string color);
+        void AddBike(string brand, string model, string type, string color, int price);
 
         [OperationContract]
-        void AddRent(int userID, int bikeID, int price);
+        void AddRent(int userID, int bikeID);
 
         [OperationContract]
         int GetUserID(string login);

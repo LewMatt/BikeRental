@@ -24,18 +24,18 @@ namespace BikeRental.Service
             return bikeRentalRepository.Login(login, password);
         }
 
-        public void AddBike(string brand, string model, string type, string color)
+        public void AddBike(string brand, string model, string type, string color, int price)
         {
             IBikeRentalRepository bikeRentalRepository = new BikeRentalRepository();
 
-            bikeRentalRepository.AddBike(brand, model, type, color);
+            bikeRentalRepository.AddBike(brand, model, type, color, price);
         }
 
-        public void AddRent(int userID, int bikeID, int price)
+        public void AddRent(int userID, int bikeID)
         {
             IBikeRentalRepository bikeRentalRepository = new BikeRentalRepository();
 
-            bikeRentalRepository.AddRent(userID, bikeID, price);
+            bikeRentalRepository.AddRent(userID, bikeID);
         }
 
         public int GetUserID(string login)

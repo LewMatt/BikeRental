@@ -101,7 +101,7 @@ namespace BikeRental.Data.Repositories
             return numberOfBikes;
         }
 
-        public void AddBike(string brand, string model, string type, string color)
+        public void AddBike(string brand, string model, string type, string color, int price)
         {
             int numberOfBikes = GetNumberOfBikes();
             int newBikeID = numberOfBikes + 1;
@@ -115,6 +115,7 @@ namespace BikeRental.Data.Repositories
                     Model = model,
                     Type = type,
                     Color = color,
+                    Price = price,
                     IsAvailable = 1
                 };
 
@@ -136,7 +137,7 @@ namespace BikeRental.Data.Repositories
             return numberOfRents;
         }
 
-        public void AddRent(int userID, int bikeID, int price)
+        public void AddRent(int userID, int bikeID)
         {
 
             int numberOfRents = GetNumberOfRents();
@@ -150,21 +151,22 @@ namespace BikeRental.Data.Repositories
 
             using (var context = _bikeRentalContext ?? new BikeRentalContext())
             {
+                Bikes bike = context.Bikes.Single(b => b.BikeID == bikeID);
+
+                bike.IsAvailable = 0;
+
                 var rent = new Rents
                 {
                    RentID = numberOfRents,
                    UserID = userID,
                    BikeID = bikeID,
-                   Price = price,
+                   Price = bike.Price,
                    ExpirationDate = returnDateStr
                 };
 
 
                 context.Rents.Add(rent);
 
-                Bikes bike = context.Bikes.Single(b => b.BikeID == bikeID);
-
-                bike.IsAvailable = 0;
 
                 context.SaveChanges();
             }

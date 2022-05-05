@@ -11,9 +11,9 @@ namespace BikeRental.Data.Repositories
         string AddUser(string login, string password, string name, string surname, string phone, string address);
         string Login(string login, string password);
         int GetNumberOfBikes();
-        void AddBike(string brand, string model, string type, string color);
+        void AddBike(string brand, string model, string type, string color, int price);
         int GetNumberOfRents();
-        void AddRent(int userID, int bikeID, int price);
+        void AddRent(int userID, int bikeID);
         int GetUserID(string login);
         void ReturnBike(int bikeID);
         void AddRepairOrder(int bikeID, string description);

@@ -41,6 +41,7 @@
         <xs:element minOccurs="0" name="model" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="color" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="price" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -54,7 +55,6 @@
       <xs:sequence>
         <xs:element minOccurs="0" name="userID" type="xs:int" />
         <xs:element minOccurs="0" name="bikeID" type="xs:int" />
-        <xs:element minOccurs="0" name="price" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

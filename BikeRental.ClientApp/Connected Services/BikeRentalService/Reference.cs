@@ -28,16 +28,16 @@ namespace BikeRental.ClientApp.BikeRentalService {
         System.Threading.Tasks.Task<string> LoginAsync(string login, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/AddBike", ReplyAction="http://tempuri.org/IBikeRentalService/AddBikeResponse")]
-        void AddBike(string brand, string model, string type, string color);
+        void AddBike(string brand, string model, string type, string color, int price);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/AddBike", ReplyAction="http://tempuri.org/IBikeRentalService/AddBikeResponse")]
-        System.Threading.Tasks.Task AddBikeAsync(string brand, string model, string type, string color);
+        System.Threading.Tasks.Task AddBikeAsync(string brand, string model, string type, string color, int price);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/AddRent", ReplyAction="http://tempuri.org/IBikeRentalService/AddRentResponse")]
-        void AddRent(int userID, int bikeID, int price);
+        void AddRent(int userID, int bikeID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/AddRent", ReplyAction="http://tempuri.org/IBikeRentalService/AddRentResponse")]
-        System.Threading.Tasks.Task AddRentAsync(int userID, int bikeID, int price);
+        System.Threading.Tasks.Task AddRentAsync(int userID, int bikeID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/GetUserID", ReplyAction="http://tempuri.org/IBikeRentalService/GetUserIDResponse")]
         int GetUserID(string login);
@@ -107,20 +107,20 @@ namespace BikeRental.ClientApp.BikeRentalService {
             return base.Channel.LoginAsync(login, password);
         }
         
-        public void AddBike(string brand, string model, string type, string color) {
-            base.Channel.AddBike(brand, model, type, color);
+        public void AddBike(string brand, string model, string type, string color, int price) {
+            base.Channel.AddBike(brand, model, type, color, price);
         }
         
-        public System.Threading.Tasks.Task AddBikeAsync(string brand, string model, string type, string color) {
-            return base.Channel.AddBikeAsync(brand, model, type, color);
+        public System.Threading.Tasks.Task AddBikeAsync(string brand, string model, string type, string color, int price) {
+            return base.Channel.AddBikeAsync(brand, model, type, color, price);
         }
         
-        public void AddRent(int userID, int bikeID, int price) {
-            base.Channel.AddRent(userID, bikeID, price);
+        public void AddRent(int userID, int bikeID) {
+            base.Channel.AddRent(userID, bikeID);
         }
         
-        public System.Threading.Tasks.Task AddRentAsync(int userID, int bikeID, int price) {
-            return base.Channel.AddRentAsync(userID, bikeID, price);
+        public System.Threading.Tasks.Task AddRentAsync(int userID, int bikeID) {
+            return base.Channel.AddRentAsync(userID, bikeID);
         }
         
         public int GetUserID(string login) {

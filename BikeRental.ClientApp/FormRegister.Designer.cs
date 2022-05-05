@@ -210,7 +210,7 @@
             this.MaximizeBox = false;
             this.Name = "FormRegister";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form2";
+            this.Text = "Rejestracja";
             this.ResumeLayout(false);
             this.PerformLayout();
 
