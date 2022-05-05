@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             this.labelCatalog = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listViewCatalog = new System.Windows.Forms.ListView();
             this.columnHeaderBrand = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderModel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderColor = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderAvailable = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // labelCatalog
@@ -46,52 +48,68 @@
             this.labelCatalog.TabIndex = 0;
             this.labelCatalog.Text = "Katalog";
             // 
-            // listView1
+            // listViewCatalog
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listViewCatalog.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeaderID,
             this.columnHeaderBrand,
             this.columnHeaderModel,
             this.columnHeaderType,
             this.columnHeaderColor,
+            this.columnHeaderPrice,
             this.columnHeaderAvailable});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(26, 42);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(525, 293);
-            this.listView1.TabIndex = 1;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listViewCatalog.HideSelection = false;
+            this.listViewCatalog.Location = new System.Drawing.Point(30, 43);
+            this.listViewCatalog.Name = "listViewCatalog";
+            this.listViewCatalog.Size = new System.Drawing.Size(525, 293);
+            this.listViewCatalog.TabIndex = 1;
+            this.listViewCatalog.UseCompatibleStateImageBehavior = false;
+            this.listViewCatalog.View = System.Windows.Forms.View.Details;
             // 
             // columnHeaderBrand
             // 
+            this.columnHeaderBrand.DisplayIndex = 0;
             this.columnHeaderBrand.Text = "Marka ";
             this.columnHeaderBrand.Width = 87;
             // 
             // columnHeaderModel
             // 
+            this.columnHeaderModel.DisplayIndex = 1;
             this.columnHeaderModel.Text = "Model";
-            this.columnHeaderModel.Width = 109;
+            this.columnHeaderModel.Width = 75;
             // 
             // columnHeaderType
             // 
+            this.columnHeaderType.DisplayIndex = 2;
             this.columnHeaderType.Text = "Typ";
-            this.columnHeaderType.Width = 100;
+            this.columnHeaderType.Width = 74;
             // 
             // columnHeaderColor
             // 
+            this.columnHeaderColor.DisplayIndex = 3;
             this.columnHeaderColor.Text = "Kolor";
-            this.columnHeaderColor.Width = 135;
+            this.columnHeaderColor.Width = 86;
             // 
             // columnHeaderAvailable
             // 
+            this.columnHeaderAvailable.DisplayIndex = 4;
             this.columnHeaderAvailable.Text = "Dostępność";
-            this.columnHeaderAvailable.Width = 73;
+            this.columnHeaderAvailable.Width = 81;
+            // 
+            // columnHeaderPrice
+            // 
+            this.columnHeaderPrice.Text = "Cena";
+            // 
+            // columnHeaderID
+            // 
+            this.columnHeaderID.DisplayIndex = 6;
+            this.columnHeaderID.Text = "ID";
             // 
             // UserControlCatalog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.listViewCatalog);
             this.Controls.Add(this.labelCatalog);
             this.Name = "UserControlCatalog";
             this.Size = new System.Drawing.Size(584, 370);
@@ -103,11 +121,13 @@
         #endregion
 
         private System.Windows.Forms.Label labelCatalog;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeaderBrand;
         private System.Windows.Forms.ColumnHeader columnHeaderModel;
         private System.Windows.Forms.ColumnHeader columnHeaderType;
         private System.Windows.Forms.ColumnHeader columnHeaderColor;
         private System.Windows.Forms.ColumnHeader columnHeaderAvailable;
+        private System.Windows.Forms.ColumnHeader columnHeaderPrice;
+        private System.Windows.Forms.ColumnHeader columnHeaderID;
+        public System.Windows.Forms.ListView listViewCatalog;
     }
 }

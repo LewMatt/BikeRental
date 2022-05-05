@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BikeRental.ClientApp.BikeRentalService;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,14 +9,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace BikeRental.ClientApp
 {
     public partial class FormMenu : Form
     {
         public int UserID;
+        BikeRentalService.BikeRentalServiceClient client = new BikeRentalService.BikeRentalServiceClient();
         public FormMenu()
         {
             InitializeComponent();
+
+            List<ListViewItem> catalog = new List<ListViewItem>();
+
+           
+
             userControlCatalog1.BringToFront();
         }
 

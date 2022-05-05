@@ -107,5 +107,19 @@ namespace BikeRental.Service
 
             return bikeRentalRepository.GetRepairOrdersByBike(bikeID);
         }
+
+        public string GetUserTypeByLogin(string login)
+        {
+            IBikeRentalRepository bikeRentalRepository = new BikeRentalRepository();
+
+            return bikeRentalRepository.GetUserTypeByLogin(login);
+        }
+
+        public List<Bikes> GetAllBikesToList()
+        {
+            IBikeRentalRepository bikeRentalRepository = new BikeRentalRepository();
+
+            return bikeRentalRepository.GetAllBikesToList();
+        }
     }
 }

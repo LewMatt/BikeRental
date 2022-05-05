@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonFixes = new System.Windows.Forms.Button();
+            this.buttonBorrowedBikesAdmin = new System.Windows.Forms.Button();
+            this.buttonCatalogAdmin = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.buttonCatalogAdmin = new System.Windows.Forms.Button();
-            this.buttonBorrowedBikesAdmin = new System.Windows.Forms.Button();
-            this.buttonFixes = new System.Windows.Forms.Button();
+            this.buttonLogOut = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -47,28 +49,14 @@
             this.panel1.Size = new System.Drawing.Size(200, 462);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // buttonFixes
             // 
-            this.panel2.Location = new System.Drawing.Point(200, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(584, 50);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.Location = new System.Drawing.Point(200, 412);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(584, 50);
-            this.panel3.TabIndex = 2;
-            // 
-            // buttonCatalogAdmin
-            // 
-            this.buttonCatalogAdmin.Location = new System.Drawing.Point(12, 105);
-            this.buttonCatalogAdmin.Name = "buttonCatalogAdmin";
-            this.buttonCatalogAdmin.Size = new System.Drawing.Size(178, 70);
-            this.buttonCatalogAdmin.TabIndex = 0;
-            this.buttonCatalogAdmin.Text = "Katalog";
-            this.buttonCatalogAdmin.UseVisualStyleBackColor = true;
+            this.buttonFixes.Location = new System.Drawing.Point(12, 259);
+            this.buttonFixes.Name = "buttonFixes";
+            this.buttonFixes.Size = new System.Drawing.Size(178, 75);
+            this.buttonFixes.TabIndex = 2;
+            this.buttonFixes.Text = "Naprawy";
+            this.buttonFixes.UseVisualStyleBackColor = true;
             // 
             // buttonBorrowedBikesAdmin
             // 
@@ -79,26 +67,54 @@
             this.buttonBorrowedBikesAdmin.Text = "Wypożyczenia";
             this.buttonBorrowedBikesAdmin.UseVisualStyleBackColor = true;
             // 
-            // buttonFixes
+            // buttonCatalogAdmin
             // 
-            this.buttonFixes.Location = new System.Drawing.Point(12, 259);
-            this.buttonFixes.Name = "buttonFixes";
-            this.buttonFixes.Size = new System.Drawing.Size(178, 75);
-            this.buttonFixes.TabIndex = 2;
-            this.buttonFixes.Text = "Naprawy";
-            this.buttonFixes.UseVisualStyleBackColor = true;
+            this.buttonCatalogAdmin.Location = new System.Drawing.Point(12, 105);
+            this.buttonCatalogAdmin.Name = "buttonCatalogAdmin";
+            this.buttonCatalogAdmin.Size = new System.Drawing.Size(178, 70);
+            this.buttonCatalogAdmin.TabIndex = 0;
+            this.buttonCatalogAdmin.Text = "Katalog";
+            this.buttonCatalogAdmin.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(200, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(584, 50);
+            this.panel2.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.buttonLogOut);
+            this.panel3.Location = new System.Drawing.Point(200, 412);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(584, 50);
+            this.panel3.TabIndex = 2;
+            // 
+            // buttonLogOut
+            // 
+            this.buttonLogOut.Location = new System.Drawing.Point(497, 14);
+            this.buttonLogOut.Name = "buttonLogOut";
+            this.buttonLogOut.Size = new System.Drawing.Size(75, 23);
+            this.buttonLogOut.TabIndex = 2;
+            this.buttonLogOut.Text = "Wyloguj";
+            this.buttonLogOut.UseVisualStyleBackColor = true;
+            this.buttonLogOut.Click += new System.EventHandler(this.buttonLogOut_Click);
             // 
             // FormMenuAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.ControlBox = false;
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "FormMenuAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMenuAdmin";
             this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -111,5 +127,6 @@
         private System.Windows.Forms.Button buttonBorrowedBikesAdmin;
         private System.Windows.Forms.Button buttonCatalogAdmin;
         private System.Windows.Forms.Button buttonFixes;
+        private System.Windows.Forms.Button buttonLogOut;
     }
 }

@@ -23,8 +23,9 @@ namespace BikeRental.Data.Repositories
         IEnumerable<RepairOrders> GetAllRepairOrders();
         IEnumerable<Repairs> GetAllRepairs();
         IEnumerable<Rents> GetRentsByUser(int userID);
-
         IEnumerable<RepairOrders> GetRepairOrdersByBike(int bikeID);
+        string GetUserTypeByLogin(string login);
+        List<Bikes> GetAllBikesToList();
 
     }
 }

@@ -48,6 +48,12 @@ namespace BikeRental.Service
 
         [OperationContract]
         IEnumerable<RepairOrders> GetRepairOrdersByBike(int bikeID);
+
+        [OperationContract]
+        string GetUserTypeByLogin(string login);
+
+        [OperationContract]
+        List<Bikes> GetAllBikesToList();
     }
 }
  

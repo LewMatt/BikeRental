@@ -88,6 +88,7 @@ namespace BikeRental.ClientApp
             this.textBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.textBoxPassword.Location = new System.Drawing.Point(328, 317);
             this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(100, 29);
             this.textBoxPassword.TabIndex = 7;
             // 
@@ -114,6 +115,7 @@ namespace BikeRental.ClientApp
             this.Controls.Add(this.textBoxLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLogin";
             this.ResumeLayout(false);
             this.PerformLayout();

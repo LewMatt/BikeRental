@@ -16,5 +16,10 @@ namespace BikeRental.ClientApp
         {
             InitializeComponent();
         }
+
+        private void buttonLogOut_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Restart();
+        }
     }
 }

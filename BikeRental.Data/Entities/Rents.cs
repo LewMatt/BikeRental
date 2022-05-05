@@ -21,13 +21,13 @@ namespace BikeRental.Data.Entities
 
         [ForeignKey("Bikes")]
         public int BikeID { get; set; }
+
         public Bikes Bikes { get; set; }
 
         public int Price { get; set; }
 
         [StringLength(200)]
         public string ExpirationDate { get; set; }
-
 
     }
 }

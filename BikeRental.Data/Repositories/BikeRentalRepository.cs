@@ -325,5 +325,35 @@ namespace BikeRental.Data.Repositories
                     .ToList();
             }
         }
+
+        public string GetUserTypeByLogin(string login)
+        {
+            string userType = "";
+
+            using (var context = _bikeRentalContext ?? new BikeRentalContext())
+            {
+                var user = context.Users.Where(u => u.Login == login).FirstOrDefault();
+                if(user == null)
+                {
+                    userType = "";
+                }
+                else
+                {
+                    userType = user.UserType;
+                }
+            }
+
+            return userType;
+        }
+
+        public List<Bikes> GetAllBikesToList()
+        {
+            using (var context = _bikeRentalContext ?? new BikeRentalContext())
+            {
+                return context.Bikes.ToList();
+            }
+        }
+
+
     }
 }

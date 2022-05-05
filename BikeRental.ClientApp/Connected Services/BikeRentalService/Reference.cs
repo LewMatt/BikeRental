@@ -821,6 +821,18 @@ namespace BikeRental.ClientApp.BikeRentalService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/GetRepairOrdersByBike", ReplyAction="http://tempuri.org/IBikeRentalService/GetRepairOrdersByBikeResponse")]
         System.Threading.Tasks.Task<BikeRental.ClientApp.BikeRentalService.RepairOrders[]> GetRepairOrdersByBikeAsync(int bikeID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/GetUserTypeByLogin", ReplyAction="http://tempuri.org/IBikeRentalService/GetUserTypeByLoginResponse")]
+        string GetUserTypeByLogin(string login);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/GetUserTypeByLogin", ReplyAction="http://tempuri.org/IBikeRentalService/GetUserTypeByLoginResponse")]
+        System.Threading.Tasks.Task<string> GetUserTypeByLoginAsync(string login);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/GetAllBikesToList", ReplyAction="http://tempuri.org/IBikeRentalService/GetAllBikesToListResponse")]
+        BikeRental.ClientApp.BikeRentalService.Bikes[] GetAllBikesToList();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/GetAllBikesToList", ReplyAction="http://tempuri.org/IBikeRentalService/GetAllBikesToListResponse")]
+        System.Threading.Tasks.Task<BikeRental.ClientApp.BikeRentalService.Bikes[]> GetAllBikesToListAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -960,6 +972,22 @@ namespace BikeRental.ClientApp.BikeRentalService {
         
         public System.Threading.Tasks.Task<BikeRental.ClientApp.BikeRentalService.RepairOrders[]> GetRepairOrdersByBikeAsync(int bikeID) {
             return base.Channel.GetRepairOrdersByBikeAsync(bikeID);
+        }
+        
+        public string GetUserTypeByLogin(string login) {
+            return base.Channel.GetUserTypeByLogin(login);
+        }
+        
+        public System.Threading.Tasks.Task<string> GetUserTypeByLoginAsync(string login) {
+            return base.Channel.GetUserTypeByLoginAsync(login);
+        }
+        
+        public BikeRental.ClientApp.BikeRentalService.Bikes[] GetAllBikesToList() {
+            return base.Channel.GetAllBikesToList();
+        }
+        
+        public System.Threading.Tasks.Task<BikeRental.ClientApp.BikeRentalService.Bikes[]> GetAllBikesToListAsync() {
+            return base.Channel.GetAllBikesToListAsync();
         }
     }
 }
