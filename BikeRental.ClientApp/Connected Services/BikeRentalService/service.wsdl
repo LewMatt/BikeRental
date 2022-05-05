@@ -97,12 +97,6 @@
   <wsdl:message name="IBikeRentalService_GetUserTypeByLogin_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetUserTypeByLoginResponse" />
   </wsdl:message>
-  <wsdl:message name="IBikeRentalService_GetAllBikesToList_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetAllBikesToList" />
-  </wsdl:message>
-  <wsdl:message name="IBikeRentalService_GetAllBikesToList_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetAllBikesToListResponse" />
-  </wsdl:message>
   <wsdl:portType name="IBikeRentalService">
     <wsdl:operation name="AddUser">
       <wsdl:input wsaw:Action="http://tempuri.org/IBikeRentalService/AddUser" message="tns:IBikeRentalService_AddUser_InputMessage" />
@@ -163,10 +157,6 @@
     <wsdl:operation name="GetUserTypeByLogin">
       <wsdl:input wsaw:Action="http://tempuri.org/IBikeRentalService/GetUserTypeByLogin" message="tns:IBikeRentalService_GetUserTypeByLogin_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IBikeRentalService/GetUserTypeByLoginResponse" message="tns:IBikeRentalService_GetUserTypeByLogin_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetAllBikesToList">
-      <wsdl:input wsaw:Action="http://tempuri.org/IBikeRentalService/GetAllBikesToList" message="tns:IBikeRentalService_GetAllBikesToList_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IBikeRentalService/GetAllBikesToListResponse" message="tns:IBikeRentalService_GetAllBikesToList_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IBikeRentalService" type="tns:IBikeRentalService">
@@ -299,15 +289,6 @@
     </wsdl:operation>
     <wsdl:operation name="GetUserTypeByLogin">
       <soap:operation soapAction="http://tempuri.org/IBikeRentalService/GetUserTypeByLogin" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetAllBikesToList">
-      <soap:operation soapAction="http://tempuri.org/IBikeRentalService/GetAllBikesToList" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

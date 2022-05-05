@@ -787,52 +787,46 @@ namespace BikeRental.ClientApp.BikeRentalService {
         System.Threading.Tasks.Task AddRepairAsync(int repairOrderID, int userID, int bikeID, string details, string state, int overallPrice);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/GetAllBikes", ReplyAction="http://tempuri.org/IBikeRentalService/GetAllBikesResponse")]
-        BikeRental.ClientApp.BikeRentalService.Bikes[] GetAllBikes();
+        System.Collections.Generic.List<BikeRental.ClientApp.BikeRentalService.Bikes> GetAllBikes();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/GetAllBikes", ReplyAction="http://tempuri.org/IBikeRentalService/GetAllBikesResponse")]
-        System.Threading.Tasks.Task<BikeRental.ClientApp.BikeRentalService.Bikes[]> GetAllBikesAsync();
+        System.Threading.Tasks.Task<System.Collections.Generic.List<BikeRental.ClientApp.BikeRentalService.Bikes>> GetAllBikesAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/GetAllRents", ReplyAction="http://tempuri.org/IBikeRentalService/GetAllRentsResponse")]
-        BikeRental.ClientApp.BikeRentalService.Rents[] GetAllRents();
+        System.Collections.Generic.List<BikeRental.ClientApp.BikeRentalService.Rents> GetAllRents();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/GetAllRents", ReplyAction="http://tempuri.org/IBikeRentalService/GetAllRentsResponse")]
-        System.Threading.Tasks.Task<BikeRental.ClientApp.BikeRentalService.Rents[]> GetAllRentsAsync();
+        System.Threading.Tasks.Task<System.Collections.Generic.List<BikeRental.ClientApp.BikeRentalService.Rents>> GetAllRentsAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/GetAllRepairOrders", ReplyAction="http://tempuri.org/IBikeRentalService/GetAllRepairOrdersResponse")]
-        BikeRental.ClientApp.BikeRentalService.RepairOrders[] GetAllRepairOrders();
+        System.Collections.Generic.List<BikeRental.ClientApp.BikeRentalService.RepairOrders> GetAllRepairOrders();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/GetAllRepairOrders", ReplyAction="http://tempuri.org/IBikeRentalService/GetAllRepairOrdersResponse")]
-        System.Threading.Tasks.Task<BikeRental.ClientApp.BikeRentalService.RepairOrders[]> GetAllRepairOrdersAsync();
+        System.Threading.Tasks.Task<System.Collections.Generic.List<BikeRental.ClientApp.BikeRentalService.RepairOrders>> GetAllRepairOrdersAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/GetAllRepairs", ReplyAction="http://tempuri.org/IBikeRentalService/GetAllRepairsResponse")]
-        BikeRental.ClientApp.BikeRentalService.Repairs[] GetAllRepairs();
+        System.Collections.Generic.List<BikeRental.ClientApp.BikeRentalService.Repairs> GetAllRepairs();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/GetAllRepairs", ReplyAction="http://tempuri.org/IBikeRentalService/GetAllRepairsResponse")]
-        System.Threading.Tasks.Task<BikeRental.ClientApp.BikeRentalService.Repairs[]> GetAllRepairsAsync();
+        System.Threading.Tasks.Task<System.Collections.Generic.List<BikeRental.ClientApp.BikeRentalService.Repairs>> GetAllRepairsAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/GetRentsByUser", ReplyAction="http://tempuri.org/IBikeRentalService/GetRentsByUserResponse")]
-        BikeRental.ClientApp.BikeRentalService.Rents[] GetRentsByUser(int userID);
+        System.Collections.Generic.List<BikeRental.ClientApp.BikeRentalService.Rents> GetRentsByUser(int userID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/GetRentsByUser", ReplyAction="http://tempuri.org/IBikeRentalService/GetRentsByUserResponse")]
-        System.Threading.Tasks.Task<BikeRental.ClientApp.BikeRentalService.Rents[]> GetRentsByUserAsync(int userID);
+        System.Threading.Tasks.Task<System.Collections.Generic.List<BikeRental.ClientApp.BikeRentalService.Rents>> GetRentsByUserAsync(int userID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/GetRepairOrdersByBike", ReplyAction="http://tempuri.org/IBikeRentalService/GetRepairOrdersByBikeResponse")]
-        BikeRental.ClientApp.BikeRentalService.RepairOrders[] GetRepairOrdersByBike(int bikeID);
+        System.Collections.Generic.List<BikeRental.ClientApp.BikeRentalService.RepairOrders> GetRepairOrdersByBike(int bikeID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/GetRepairOrdersByBike", ReplyAction="http://tempuri.org/IBikeRentalService/GetRepairOrdersByBikeResponse")]
-        System.Threading.Tasks.Task<BikeRental.ClientApp.BikeRentalService.RepairOrders[]> GetRepairOrdersByBikeAsync(int bikeID);
+        System.Threading.Tasks.Task<System.Collections.Generic.List<BikeRental.ClientApp.BikeRentalService.RepairOrders>> GetRepairOrdersByBikeAsync(int bikeID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/GetUserTypeByLogin", ReplyAction="http://tempuri.org/IBikeRentalService/GetUserTypeByLoginResponse")]
         string GetUserTypeByLogin(string login);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/GetUserTypeByLogin", ReplyAction="http://tempuri.org/IBikeRentalService/GetUserTypeByLoginResponse")]
         System.Threading.Tasks.Task<string> GetUserTypeByLoginAsync(string login);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/GetAllBikesToList", ReplyAction="http://tempuri.org/IBikeRentalService/GetAllBikesToListResponse")]
-        BikeRental.ClientApp.BikeRentalService.Bikes[] GetAllBikesToList();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/GetAllBikesToList", ReplyAction="http://tempuri.org/IBikeRentalService/GetAllBikesToListResponse")]
-        System.Threading.Tasks.Task<BikeRental.ClientApp.BikeRentalService.Bikes[]> GetAllBikesToListAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -926,51 +920,51 @@ namespace BikeRental.ClientApp.BikeRentalService {
             return base.Channel.AddRepairAsync(repairOrderID, userID, bikeID, details, state, overallPrice);
         }
         
-        public BikeRental.ClientApp.BikeRentalService.Bikes[] GetAllBikes() {
+        public System.Collections.Generic.List<BikeRental.ClientApp.BikeRentalService.Bikes> GetAllBikes() {
             return base.Channel.GetAllBikes();
         }
         
-        public System.Threading.Tasks.Task<BikeRental.ClientApp.BikeRentalService.Bikes[]> GetAllBikesAsync() {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<BikeRental.ClientApp.BikeRentalService.Bikes>> GetAllBikesAsync() {
             return base.Channel.GetAllBikesAsync();
         }
         
-        public BikeRental.ClientApp.BikeRentalService.Rents[] GetAllRents() {
+        public System.Collections.Generic.List<BikeRental.ClientApp.BikeRentalService.Rents> GetAllRents() {
             return base.Channel.GetAllRents();
         }
         
-        public System.Threading.Tasks.Task<BikeRental.ClientApp.BikeRentalService.Rents[]> GetAllRentsAsync() {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<BikeRental.ClientApp.BikeRentalService.Rents>> GetAllRentsAsync() {
             return base.Channel.GetAllRentsAsync();
         }
         
-        public BikeRental.ClientApp.BikeRentalService.RepairOrders[] GetAllRepairOrders() {
+        public System.Collections.Generic.List<BikeRental.ClientApp.BikeRentalService.RepairOrders> GetAllRepairOrders() {
             return base.Channel.GetAllRepairOrders();
         }
         
-        public System.Threading.Tasks.Task<BikeRental.ClientApp.BikeRentalService.RepairOrders[]> GetAllRepairOrdersAsync() {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<BikeRental.ClientApp.BikeRentalService.RepairOrders>> GetAllRepairOrdersAsync() {
             return base.Channel.GetAllRepairOrdersAsync();
         }
         
-        public BikeRental.ClientApp.BikeRentalService.Repairs[] GetAllRepairs() {
+        public System.Collections.Generic.List<BikeRental.ClientApp.BikeRentalService.Repairs> GetAllRepairs() {
             return base.Channel.GetAllRepairs();
         }
         
-        public System.Threading.Tasks.Task<BikeRental.ClientApp.BikeRentalService.Repairs[]> GetAllRepairsAsync() {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<BikeRental.ClientApp.BikeRentalService.Repairs>> GetAllRepairsAsync() {
             return base.Channel.GetAllRepairsAsync();
         }
         
-        public BikeRental.ClientApp.BikeRentalService.Rents[] GetRentsByUser(int userID) {
+        public System.Collections.Generic.List<BikeRental.ClientApp.BikeRentalService.Rents> GetRentsByUser(int userID) {
             return base.Channel.GetRentsByUser(userID);
         }
         
-        public System.Threading.Tasks.Task<BikeRental.ClientApp.BikeRentalService.Rents[]> GetRentsByUserAsync(int userID) {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<BikeRental.ClientApp.BikeRentalService.Rents>> GetRentsByUserAsync(int userID) {
             return base.Channel.GetRentsByUserAsync(userID);
         }
         
-        public BikeRental.ClientApp.BikeRentalService.RepairOrders[] GetRepairOrdersByBike(int bikeID) {
+        public System.Collections.Generic.List<BikeRental.ClientApp.BikeRentalService.RepairOrders> GetRepairOrdersByBike(int bikeID) {
             return base.Channel.GetRepairOrdersByBike(bikeID);
         }
         
-        public System.Threading.Tasks.Task<BikeRental.ClientApp.BikeRentalService.RepairOrders[]> GetRepairOrdersByBikeAsync(int bikeID) {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<BikeRental.ClientApp.BikeRentalService.RepairOrders>> GetRepairOrdersByBikeAsync(int bikeID) {
             return base.Channel.GetRepairOrdersByBikeAsync(bikeID);
         }
         
@@ -980,14 +974,6 @@ namespace BikeRental.ClientApp.BikeRentalService {
         
         public System.Threading.Tasks.Task<string> GetUserTypeByLoginAsync(string login) {
             return base.Channel.GetUserTypeByLoginAsync(login);
-        }
-        
-        public BikeRental.ClientApp.BikeRentalService.Bikes[] GetAllBikesToList() {
-            return base.Channel.GetAllBikesToList();
-        }
-        
-        public System.Threading.Tasks.Task<BikeRental.ClientApp.BikeRentalService.Bikes[]> GetAllBikesToListAsync() {
-            return base.Channel.GetAllBikesToListAsync();
         }
     }
 }

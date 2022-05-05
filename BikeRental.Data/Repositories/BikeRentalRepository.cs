@@ -163,7 +163,8 @@ namespace BikeRental.Data.Repositories
                         UserID = userID,
                         BikeID = bikeID,
                         Price = bike.Price,
-                        ExpirationDate = returnDateStr
+                        ExpirationDate = returnDateStr,
+                        IsDone = 0
                     };
 
 
@@ -201,6 +202,14 @@ namespace BikeRental.Data.Repositories
                 Bikes bike = context.Bikes.Single(b => b.BikeID == bikeID);
 
                 bike.IsAvailable = 1;
+
+                var rents = context.Rents.Where(b => b.BikeID == bikeID);
+
+                foreach(var item in rents)
+                {
+                    item.IsDone = 1;
+                }
+
 
                 context.SaveChanges();
             }
@@ -311,7 +320,7 @@ namespace BikeRental.Data.Repositories
             using (var context = _bikeRentalContext ?? new BikeRentalContext())
             {
                 return context.Rents
-                    .Where(r => r.UserID == userID)
+                    .Where(r => r.UserID == userID && r.IsDone == 0)
                     .ToList();
             }
         }
@@ -346,13 +355,7 @@ namespace BikeRental.Data.Repositories
             return userType;
         }
 
-        public List<Bikes> GetAllBikesToList()
-        {
-            using (var context = _bikeRentalContext ?? new BikeRentalContext())
-            {
-                return context.Bikes.ToList();
-            }
-        }
+    
 
 
     }

@@ -115,11 +115,6 @@ namespace BikeRental.Service
             return bikeRentalRepository.GetUserTypeByLogin(login);
         }
 
-        public List<Bikes> GetAllBikesToList()
-        {
-            IBikeRentalRepository bikeRentalRepository = new BikeRentalRepository();
-
-            return bikeRentalRepository.GetAllBikesToList();
-        }
+        
     }
 }

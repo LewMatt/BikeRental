@@ -52,8 +52,7 @@ namespace BikeRental.Service
         [OperationContract]
         string GetUserTypeByLogin(string login);
 
-        [OperationContract]
-        List<Bikes> GetAllBikesToList();
+     
     }
 }
  
