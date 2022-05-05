@@ -15,11 +15,27 @@ namespace BikeRental.ClientApp
         public FormMenuAdmin()
         {
             InitializeComponent();
+            userControlCatalogAdmin1.BringToFront();
         }
 
         private void buttonLogOut_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.Restart();
+        }
+
+        private void buttonCatalogAdmin_Click(object sender, EventArgs e)
+        {
+            userControlCatalogAdmin1.BringToFront();
+        }
+
+        private void buttonBorrowedBikesAdmin_Click(object sender, EventArgs e)
+        {
+            userControlBorrowedAdmin1.BringToFront();
+        }
+
+        private void buttonFixes_Click(object sender, EventArgs e)
+        {
+            userControlFixesAdmin1.BringToFront();
         }
     }
 }
