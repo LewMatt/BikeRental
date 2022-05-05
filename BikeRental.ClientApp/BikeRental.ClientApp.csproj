@@ -69,11 +69,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="FormRegister.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="FormRegister.Designer.cs">
+      <DependentUpon>FormRegister.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
@@ -128,8 +128,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="FormRegister.resx">
+      <DependentUpon>FormRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
@@ -164,6 +164,21 @@
     <EmbeddedResource Include="UserControlFixesAdmin.resx">
       <DependentUpon>UserControlFixesAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Connected Services\BikeRentalService\BikeRental.ClientApp.BikeRentalService.Bikes.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BikeRentalService\BikeRental.ClientApp.BikeRentalService.Rents.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BikeRentalService\BikeRental.ClientApp.BikeRentalService.RepairOrders.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BikeRentalService\BikeRental.ClientApp.BikeRentalService.Repairs.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BikeRentalService\BikeRental.Data.Entities.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\BikeRentalService\service.wsdl" />
     <None Include="Connected Services\BikeRentalService\service.xsd">
       <SubType>Designer</SubType>

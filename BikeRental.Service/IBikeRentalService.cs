@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using BikeRental.Data.Entities;
+using System.Collections.Generic;
 using System.ServiceModel;
 
 namespace BikeRental.Service
@@ -13,10 +14,10 @@ namespace BikeRental.Service
         string Login(string login, string password);
 
         [OperationContract]
-        void AddBike(string brand, string model, string type, string color);
+        void AddBike(string brand, string model, string type, string color, int price);
 
         [OperationContract]
-        void AddRent(int userID, int bikeID, int price);
+        string AddRent(int userID, int bikeID);
 
         [OperationContract]
         int GetUserID(string login);
@@ -26,6 +27,27 @@ namespace BikeRental.Service
 
         [OperationContract]
         void AddRepairOrder(int bikeID, string description);
+
+        [OperationContract]
+        void AddRepair(int repairOrderID, int userID, int bikeID, string details, string state, int overallPrice);
+
+        [OperationContract]
+        IEnumerable<Bikes> GetAllBikes();
+
+        [OperationContract]
+        IEnumerable<Rents> GetAllRents();
+
+        [OperationContract]
+        IEnumerable<RepairOrders> GetAllRepairOrders();
+
+        [OperationContract]
+        IEnumerable<Repairs> GetAllRepairs();
+
+        [OperationContract]
+        IEnumerable<Rents> GetRentsByUser(int userID);
+
+        [OperationContract]
+        IEnumerable<RepairOrders> GetRepairOrdersByBike(int bikeID);
     }
 }
  

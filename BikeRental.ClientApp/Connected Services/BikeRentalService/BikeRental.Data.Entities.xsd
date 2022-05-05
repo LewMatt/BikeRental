@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BikeRental.Data.Entities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BikeRental.Data.Entities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfBikes">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Bikes" nillable="true" type="tns:Bikes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBikes" nillable="true" type="tns:ArrayOfBikes" />
+  <xs:complexType name="Bikes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BikeID" type="xs:int" />
+      <xs:element minOccurs="0" name="Brand" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Color" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsAvailable" type="xs:int" />
+      <xs:element minOccurs="0" name="Model" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Price" type="xs:int" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Bikes" nillable="true" type="tns:Bikes" />
+  <xs:complexType name="ArrayOfRents">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Rents" nillable="true" type="tns:Rents" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRents" nillable="true" type="tns:ArrayOfRents" />
+  <xs:complexType name="Rents">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BikeID" type="xs:int" />
+      <xs:element minOccurs="0" name="Bikes" nillable="true" type="tns:Bikes" />
+      <xs:element minOccurs="0" name="ExpirationDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Price" type="xs:int" />
+      <xs:element minOccurs="0" name="RentID" type="xs:int" />
+      <xs:element minOccurs="0" name="UserID" type="xs:int" />
+      <xs:element minOccurs="0" name="Users" nillable="true" type="tns:Users" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Rents" nillable="true" type="tns:Rents" />
+  <xs:complexType name="Users">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Login" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Surname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" type="xs:int" />
+      <xs:element minOccurs="0" name="UserType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Users" nillable="true" type="tns:Users" />
+  <xs:complexType name="ArrayOfRepairOrders">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RepairOrders" nillable="true" type="tns:RepairOrders" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRepairOrders" nillable="true" type="tns:ArrayOfRepairOrders" />
+  <xs:complexType name="RepairOrders">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BikeID" type="xs:int" />
+      <xs:element minOccurs="0" name="Bikes" nillable="true" type="tns:Bikes" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RepairOrderID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RepairOrders" nillable="true" type="tns:RepairOrders" />
+  <xs:complexType name="ArrayOfRepairs">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Repairs" nillable="true" type="tns:Repairs" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRepairs" nillable="true" type="tns:ArrayOfRepairs" />
+  <xs:complexType name="Repairs">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BikeID" type="xs:int" />
+      <xs:element minOccurs="0" name="Bikes" nillable="true" type="tns:Bikes" />
+      <xs:element minOccurs="0" name="Details" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OverallPrice" type="xs:int" />
+      <xs:element minOccurs="0" name="RepairID" type="xs:int" />
+      <xs:element minOccurs="0" name="RepairOrderID" type="xs:int" />
+      <xs:element minOccurs="0" name="RepairOrders" nillable="true" type="tns:RepairOrders" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" type="xs:int" />
+      <xs:element minOccurs="0" name="Users" nillable="true" type="tns:Users" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Repairs" nillable="true" type="tns:Repairs" />
+</xs:schema>

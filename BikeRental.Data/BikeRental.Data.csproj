@@ -65,6 +65,10 @@
     <Compile Include="Migrations\202205042144524_migr.designer.cs">
       <DependentUpon>202205042144524_migr.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202205042350381_databateUpdated.cs" />
+    <Compile Include="Migrations\202205042350381_databateUpdated.designer.cs">
+      <DependentUpon>202205042350381_databateUpdated.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\BikeRentalRepository.cs" />
@@ -80,6 +84,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202205042144524_migr.resx">
       <DependentUpon>202205042144524_migr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205042350381_databateUpdated.resx">
+      <DependentUpon>202205042350381_databateUpdated.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

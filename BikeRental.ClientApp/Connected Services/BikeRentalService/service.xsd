@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/BikeRental.Data.Entities" />
   <xs:element name="AddUser">
     <xs:complexType>
       <xs:sequence>
@@ -41,6 +42,7 @@
         <xs:element minOccurs="0" name="model" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="color" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="price" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -54,13 +56,14 @@
       <xs:sequence>
         <xs:element minOccurs="0" name="userID" type="xs:int" />
         <xs:element minOccurs="0" name="bikeID" type="xs:int" />
-        <xs:element minOccurs="0" name="price" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddRentResponse">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddRentResult" nillable="true" type="xs:string" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetUserID">
@@ -100,6 +103,99 @@
   <xs:element name="AddRepairOrderResponse">
     <xs:complexType>
       <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddRepair">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="repairOrderID" type="xs:int" />
+        <xs:element minOccurs="0" name="userID" type="xs:int" />
+        <xs:element minOccurs="0" name="bikeID" type="xs:int" />
+        <xs:element minOccurs="0" name="details" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="state" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="overallPrice" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddRepairResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllBikes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllBikesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/BikeRental.Data.Entities" minOccurs="0" name="GetAllBikesResult" nillable="true" type="q1:ArrayOfBikes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllRents">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllRentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/BikeRental.Data.Entities" minOccurs="0" name="GetAllRentsResult" nillable="true" type="q2:ArrayOfRents" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllRepairOrders">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllRepairOrdersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/BikeRental.Data.Entities" minOccurs="0" name="GetAllRepairOrdersResult" nillable="true" type="q3:ArrayOfRepairOrders" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllRepairs">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllRepairsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/BikeRental.Data.Entities" minOccurs="0" name="GetAllRepairsResult" nillable="true" type="q4:ArrayOfRepairs" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRentsByUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRentsByUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/BikeRental.Data.Entities" minOccurs="0" name="GetRentsByUserResult" nillable="true" type="q5:ArrayOfRents" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRepairOrdersByBike">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bikeID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRepairOrdersByBikeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/BikeRental.Data.Entities" minOccurs="0" name="GetRepairOrdersByBikeResult" nillable="true" type="q6:ArrayOfRepairOrders" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
 </xs:schema>

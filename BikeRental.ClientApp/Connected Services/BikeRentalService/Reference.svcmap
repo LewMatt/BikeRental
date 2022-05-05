@@ -25,6 +25,7 @@
     <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="68fdc62e-8cfe-4493-97eb-ae6e0bb28313" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/BikeRental.Service/BikeRentalService/mex" />
     <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="f2735806-6072-4a68-97da-b30047121253" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/BikeRental.Service/BikeRentalService/mex" />
     <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="9d0989db-86a2-4da0-950e-9b81e666a78b" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/BikeRental.Service/BikeRentalService/mex" />
+    <MetadataFile FileName="BikeRental.Data.Entities.xsd" MetadataType="Schema" ID="c6d6948b-3064-46a4-b03a-c51ade71e545" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/BikeRental.Service/BikeRentalService/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

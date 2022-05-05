@@ -9,7 +9,730 @@
 //------------------------------------------------------------------------------
 
 namespace BikeRental.ClientApp.BikeRentalService {
+    using System.Runtime.Serialization;
+    using System;
     
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Bikes", Namespace="http://schemas.datacontract.org/2004/07/BikeRental.Data.Entities")]
+    [System.SerializableAttribute()]
+    public partial class Bikes : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int BikeIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string BrandField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ColorField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IsAvailableField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ModelField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int PriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TypeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int BikeID {
+            get {
+                return this.BikeIDField;
+            }
+            set {
+                if ((this.BikeIDField.Equals(value) != true)) {
+                    this.BikeIDField = value;
+                    this.RaisePropertyChanged("BikeID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Brand {
+            get {
+                return this.BrandField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BrandField, value) != true)) {
+                    this.BrandField = value;
+                    this.RaisePropertyChanged("Brand");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Color {
+            get {
+                return this.ColorField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ColorField, value) != true)) {
+                    this.ColorField = value;
+                    this.RaisePropertyChanged("Color");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IsAvailable {
+            get {
+                return this.IsAvailableField;
+            }
+            set {
+                if ((this.IsAvailableField.Equals(value) != true)) {
+                    this.IsAvailableField = value;
+                    this.RaisePropertyChanged("IsAvailable");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Model {
+            get {
+                return this.ModelField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ModelField, value) != true)) {
+                    this.ModelField = value;
+                    this.RaisePropertyChanged("Model");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Price {
+            get {
+                return this.PriceField;
+            }
+            set {
+                if ((this.PriceField.Equals(value) != true)) {
+                    this.PriceField = value;
+                    this.RaisePropertyChanged("Price");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Type {
+            get {
+                return this.TypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TypeField, value) != true)) {
+                    this.TypeField = value;
+                    this.RaisePropertyChanged("Type");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Rents", Namespace="http://schemas.datacontract.org/2004/07/BikeRental.Data.Entities")]
+    [System.SerializableAttribute()]
+    public partial class Rents : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int BikeIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private BikeRental.ClientApp.BikeRentalService.Bikes BikesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ExpirationDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int PriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int RentIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int UserIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private BikeRental.ClientApp.BikeRentalService.Users UsersField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int BikeID {
+            get {
+                return this.BikeIDField;
+            }
+            set {
+                if ((this.BikeIDField.Equals(value) != true)) {
+                    this.BikeIDField = value;
+                    this.RaisePropertyChanged("BikeID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public BikeRental.ClientApp.BikeRentalService.Bikes Bikes {
+            get {
+                return this.BikesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BikesField, value) != true)) {
+                    this.BikesField = value;
+                    this.RaisePropertyChanged("Bikes");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ExpirationDate {
+            get {
+                return this.ExpirationDateField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ExpirationDateField, value) != true)) {
+                    this.ExpirationDateField = value;
+                    this.RaisePropertyChanged("ExpirationDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Price {
+            get {
+                return this.PriceField;
+            }
+            set {
+                if ((this.PriceField.Equals(value) != true)) {
+                    this.PriceField = value;
+                    this.RaisePropertyChanged("Price");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int RentID {
+            get {
+                return this.RentIDField;
+            }
+            set {
+                if ((this.RentIDField.Equals(value) != true)) {
+                    this.RentIDField = value;
+                    this.RaisePropertyChanged("RentID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int UserID {
+            get {
+                return this.UserIDField;
+            }
+            set {
+                if ((this.UserIDField.Equals(value) != true)) {
+                    this.UserIDField = value;
+                    this.RaisePropertyChanged("UserID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public BikeRental.ClientApp.BikeRentalService.Users Users {
+            get {
+                return this.UsersField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UsersField, value) != true)) {
+                    this.UsersField = value;
+                    this.RaisePropertyChanged("Users");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Users", Namespace="http://schemas.datacontract.org/2004/07/BikeRental.Data.Entities")]
+    [System.SerializableAttribute()]
+    public partial class Users : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AddressField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LoginField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PasswordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PhoneField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SurnameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int UserIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UserTypeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Address {
+            get {
+                return this.AddressField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AddressField, value) != true)) {
+                    this.AddressField = value;
+                    this.RaisePropertyChanged("Address");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Login {
+            get {
+                return this.LoginField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LoginField, value) != true)) {
+                    this.LoginField = value;
+                    this.RaisePropertyChanged("Login");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Password {
+            get {
+                return this.PasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PasswordField, value) != true)) {
+                    this.PasswordField = value;
+                    this.RaisePropertyChanged("Password");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Phone {
+            get {
+                return this.PhoneField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PhoneField, value) != true)) {
+                    this.PhoneField = value;
+                    this.RaisePropertyChanged("Phone");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Surname {
+            get {
+                return this.SurnameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SurnameField, value) != true)) {
+                    this.SurnameField = value;
+                    this.RaisePropertyChanged("Surname");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int UserID {
+            get {
+                return this.UserIDField;
+            }
+            set {
+                if ((this.UserIDField.Equals(value) != true)) {
+                    this.UserIDField = value;
+                    this.RaisePropertyChanged("UserID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UserType {
+            get {
+                return this.UserTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserTypeField, value) != true)) {
+                    this.UserTypeField = value;
+                    this.RaisePropertyChanged("UserType");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="RepairOrders", Namespace="http://schemas.datacontract.org/2004/07/BikeRental.Data.Entities")]
+    [System.SerializableAttribute()]
+    public partial class RepairOrders : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int BikeIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private BikeRental.ClientApp.BikeRentalService.Bikes BikesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int RepairOrderIDField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int BikeID {
+            get {
+                return this.BikeIDField;
+            }
+            set {
+                if ((this.BikeIDField.Equals(value) != true)) {
+                    this.BikeIDField = value;
+                    this.RaisePropertyChanged("BikeID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public BikeRental.ClientApp.BikeRentalService.Bikes Bikes {
+            get {
+                return this.BikesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BikesField, value) != true)) {
+                    this.BikesField = value;
+                    this.RaisePropertyChanged("Bikes");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Description {
+            get {
+                return this.DescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
+                    this.DescriptionField = value;
+                    this.RaisePropertyChanged("Description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int RepairOrderID {
+            get {
+                return this.RepairOrderIDField;
+            }
+            set {
+                if ((this.RepairOrderIDField.Equals(value) != true)) {
+                    this.RepairOrderIDField = value;
+                    this.RaisePropertyChanged("RepairOrderID");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Repairs", Namespace="http://schemas.datacontract.org/2004/07/BikeRental.Data.Entities")]
+    [System.SerializableAttribute()]
+    public partial class Repairs : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int BikeIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private BikeRental.ClientApp.BikeRentalService.Bikes BikesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DetailsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int OverallPriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int RepairIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int RepairOrderIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private BikeRental.ClientApp.BikeRentalService.RepairOrders RepairOrdersField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int UserIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private BikeRental.ClientApp.BikeRentalService.Users UsersField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int BikeID {
+            get {
+                return this.BikeIDField;
+            }
+            set {
+                if ((this.BikeIDField.Equals(value) != true)) {
+                    this.BikeIDField = value;
+                    this.RaisePropertyChanged("BikeID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public BikeRental.ClientApp.BikeRentalService.Bikes Bikes {
+            get {
+                return this.BikesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BikesField, value) != true)) {
+                    this.BikesField = value;
+                    this.RaisePropertyChanged("Bikes");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Details {
+            get {
+                return this.DetailsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DetailsField, value) != true)) {
+                    this.DetailsField = value;
+                    this.RaisePropertyChanged("Details");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int OverallPrice {
+            get {
+                return this.OverallPriceField;
+            }
+            set {
+                if ((this.OverallPriceField.Equals(value) != true)) {
+                    this.OverallPriceField = value;
+                    this.RaisePropertyChanged("OverallPrice");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int RepairID {
+            get {
+                return this.RepairIDField;
+            }
+            set {
+                if ((this.RepairIDField.Equals(value) != true)) {
+                    this.RepairIDField = value;
+                    this.RaisePropertyChanged("RepairID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int RepairOrderID {
+            get {
+                return this.RepairOrderIDField;
+            }
+            set {
+                if ((this.RepairOrderIDField.Equals(value) != true)) {
+                    this.RepairOrderIDField = value;
+                    this.RaisePropertyChanged("RepairOrderID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public BikeRental.ClientApp.BikeRentalService.RepairOrders RepairOrders {
+            get {
+                return this.RepairOrdersField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RepairOrdersField, value) != true)) {
+                    this.RepairOrdersField = value;
+                    this.RaisePropertyChanged("RepairOrders");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string State {
+            get {
+                return this.StateField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StateField, value) != true)) {
+                    this.StateField = value;
+                    this.RaisePropertyChanged("State");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int UserID {
+            get {
+                return this.UserIDField;
+            }
+            set {
+                if ((this.UserIDField.Equals(value) != true)) {
+                    this.UserIDField = value;
+                    this.RaisePropertyChanged("UserID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public BikeRental.ClientApp.BikeRentalService.Users Users {
+            get {
+                return this.UsersField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UsersField, value) != true)) {
+                    this.UsersField = value;
+                    this.RaisePropertyChanged("Users");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="BikeRentalService.IBikeRentalService")]
@@ -28,16 +751,16 @@ namespace BikeRental.ClientApp.BikeRentalService {
         System.Threading.Tasks.Task<string> LoginAsync(string login, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/AddBike", ReplyAction="http://tempuri.org/IBikeRentalService/AddBikeResponse")]
-        void AddBike(string brand, string model, string type, string color);
+        void AddBike(string brand, string model, string type, string color, int price);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/AddBike", ReplyAction="http://tempuri.org/IBikeRentalService/AddBikeResponse")]
-        System.Threading.Tasks.Task AddBikeAsync(string brand, string model, string type, string color);
+        System.Threading.Tasks.Task AddBikeAsync(string brand, string model, string type, string color, int price);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/AddRent", ReplyAction="http://tempuri.org/IBikeRentalService/AddRentResponse")]
-        void AddRent(int userID, int bikeID, int price);
+        string AddRent(int userID, int bikeID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/AddRent", ReplyAction="http://tempuri.org/IBikeRentalService/AddRentResponse")]
-        System.Threading.Tasks.Task AddRentAsync(int userID, int bikeID, int price);
+        System.Threading.Tasks.Task<string> AddRentAsync(int userID, int bikeID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/GetUserID", ReplyAction="http://tempuri.org/IBikeRentalService/GetUserIDResponse")]
         int GetUserID(string login);
@@ -56,6 +779,48 @@ namespace BikeRental.ClientApp.BikeRentalService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/AddRepairOrder", ReplyAction="http://tempuri.org/IBikeRentalService/AddRepairOrderResponse")]
         System.Threading.Tasks.Task AddRepairOrderAsync(int bikeID, string description);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/AddRepair", ReplyAction="http://tempuri.org/IBikeRentalService/AddRepairResponse")]
+        void AddRepair(int repairOrderID, int userID, int bikeID, string details, string state, int overallPrice);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/AddRepair", ReplyAction="http://tempuri.org/IBikeRentalService/AddRepairResponse")]
+        System.Threading.Tasks.Task AddRepairAsync(int repairOrderID, int userID, int bikeID, string details, string state, int overallPrice);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/GetAllBikes", ReplyAction="http://tempuri.org/IBikeRentalService/GetAllBikesResponse")]
+        BikeRental.ClientApp.BikeRentalService.Bikes[] GetAllBikes();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/GetAllBikes", ReplyAction="http://tempuri.org/IBikeRentalService/GetAllBikesResponse")]
+        System.Threading.Tasks.Task<BikeRental.ClientApp.BikeRentalService.Bikes[]> GetAllBikesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/GetAllRents", ReplyAction="http://tempuri.org/IBikeRentalService/GetAllRentsResponse")]
+        BikeRental.ClientApp.BikeRentalService.Rents[] GetAllRents();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/GetAllRents", ReplyAction="http://tempuri.org/IBikeRentalService/GetAllRentsResponse")]
+        System.Threading.Tasks.Task<BikeRental.ClientApp.BikeRentalService.Rents[]> GetAllRentsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/GetAllRepairOrders", ReplyAction="http://tempuri.org/IBikeRentalService/GetAllRepairOrdersResponse")]
+        BikeRental.ClientApp.BikeRentalService.RepairOrders[] GetAllRepairOrders();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/GetAllRepairOrders", ReplyAction="http://tempuri.org/IBikeRentalService/GetAllRepairOrdersResponse")]
+        System.Threading.Tasks.Task<BikeRental.ClientApp.BikeRentalService.RepairOrders[]> GetAllRepairOrdersAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/GetAllRepairs", ReplyAction="http://tempuri.org/IBikeRentalService/GetAllRepairsResponse")]
+        BikeRental.ClientApp.BikeRentalService.Repairs[] GetAllRepairs();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/GetAllRepairs", ReplyAction="http://tempuri.org/IBikeRentalService/GetAllRepairsResponse")]
+        System.Threading.Tasks.Task<BikeRental.ClientApp.BikeRentalService.Repairs[]> GetAllRepairsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/GetRentsByUser", ReplyAction="http://tempuri.org/IBikeRentalService/GetRentsByUserResponse")]
+        BikeRental.ClientApp.BikeRentalService.Rents[] GetRentsByUser(int userID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/GetRentsByUser", ReplyAction="http://tempuri.org/IBikeRentalService/GetRentsByUserResponse")]
+        System.Threading.Tasks.Task<BikeRental.ClientApp.BikeRentalService.Rents[]> GetRentsByUserAsync(int userID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/GetRepairOrdersByBike", ReplyAction="http://tempuri.org/IBikeRentalService/GetRepairOrdersByBikeResponse")]
+        BikeRental.ClientApp.BikeRentalService.RepairOrders[] GetRepairOrdersByBike(int bikeID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBikeRentalService/GetRepairOrdersByBike", ReplyAction="http://tempuri.org/IBikeRentalService/GetRepairOrdersByBikeResponse")]
+        System.Threading.Tasks.Task<BikeRental.ClientApp.BikeRentalService.RepairOrders[]> GetRepairOrdersByBikeAsync(int bikeID);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -101,20 +866,20 @@ namespace BikeRental.ClientApp.BikeRentalService {
             return base.Channel.LoginAsync(login, password);
         }
         
-        public void AddBike(string brand, string model, string type, string color) {
-            base.Channel.AddBike(brand, model, type, color);
+        public void AddBike(string brand, string model, string type, string color, int price) {
+            base.Channel.AddBike(brand, model, type, color, price);
         }
         
-        public System.Threading.Tasks.Task AddBikeAsync(string brand, string model, string type, string color) {
-            return base.Channel.AddBikeAsync(brand, model, type, color);
+        public System.Threading.Tasks.Task AddBikeAsync(string brand, string model, string type, string color, int price) {
+            return base.Channel.AddBikeAsync(brand, model, type, color, price);
         }
         
-        public void AddRent(int userID, int bikeID, int price) {
-            base.Channel.AddRent(userID, bikeID, price);
+        public string AddRent(int userID, int bikeID) {
+            return base.Channel.AddRent(userID, bikeID);
         }
         
-        public System.Threading.Tasks.Task AddRentAsync(int userID, int bikeID, int price) {
-            return base.Channel.AddRentAsync(userID, bikeID, price);
+        public System.Threading.Tasks.Task<string> AddRentAsync(int userID, int bikeID) {
+            return base.Channel.AddRentAsync(userID, bikeID);
         }
         
         public int GetUserID(string login) {
@@ -139,6 +904,62 @@ namespace BikeRental.ClientApp.BikeRentalService {
         
         public System.Threading.Tasks.Task AddRepairOrderAsync(int bikeID, string description) {
             return base.Channel.AddRepairOrderAsync(bikeID, description);
+        }
+        
+        public void AddRepair(int repairOrderID, int userID, int bikeID, string details, string state, int overallPrice) {
+            base.Channel.AddRepair(repairOrderID, userID, bikeID, details, state, overallPrice);
+        }
+        
+        public System.Threading.Tasks.Task AddRepairAsync(int repairOrderID, int userID, int bikeID, string details, string state, int overallPrice) {
+            return base.Channel.AddRepairAsync(repairOrderID, userID, bikeID, details, state, overallPrice);
+        }
+        
+        public BikeRental.ClientApp.BikeRentalService.Bikes[] GetAllBikes() {
+            return base.Channel.GetAllBikes();
+        }
+        
+        public System.Threading.Tasks.Task<BikeRental.ClientApp.BikeRentalService.Bikes[]> GetAllBikesAsync() {
+            return base.Channel.GetAllBikesAsync();
+        }
+        
+        public BikeRental.ClientApp.BikeRentalService.Rents[] GetAllRents() {
+            return base.Channel.GetAllRents();
+        }
+        
+        public System.Threading.Tasks.Task<BikeRental.ClientApp.BikeRentalService.Rents[]> GetAllRentsAsync() {
+            return base.Channel.GetAllRentsAsync();
+        }
+        
+        public BikeRental.ClientApp.BikeRentalService.RepairOrders[] GetAllRepairOrders() {
+            return base.Channel.GetAllRepairOrders();
+        }
+        
+        public System.Threading.Tasks.Task<BikeRental.ClientApp.BikeRentalService.RepairOrders[]> GetAllRepairOrdersAsync() {
+            return base.Channel.GetAllRepairOrdersAsync();
+        }
+        
+        public BikeRental.ClientApp.BikeRentalService.Repairs[] GetAllRepairs() {
+            return base.Channel.GetAllRepairs();
+        }
+        
+        public System.Threading.Tasks.Task<BikeRental.ClientApp.BikeRentalService.Repairs[]> GetAllRepairsAsync() {
+            return base.Channel.GetAllRepairsAsync();
+        }
+        
+        public BikeRental.ClientApp.BikeRentalService.Rents[] GetRentsByUser(int userID) {
+            return base.Channel.GetRentsByUser(userID);
+        }
+        
+        public System.Threading.Tasks.Task<BikeRental.ClientApp.BikeRentalService.Rents[]> GetRentsByUserAsync(int userID) {
+            return base.Channel.GetRentsByUserAsync(userID);
+        }
+        
+        public BikeRental.ClientApp.BikeRentalService.RepairOrders[] GetRepairOrdersByBike(int bikeID) {
+            return base.Channel.GetRepairOrdersByBike(bikeID);
+        }
+        
+        public System.Threading.Tasks.Task<BikeRental.ClientApp.BikeRentalService.RepairOrders[]> GetRepairOrdersByBikeAsync(int bikeID) {
+            return base.Channel.GetRepairOrdersByBikeAsync(bikeID);
         }
     }
 }

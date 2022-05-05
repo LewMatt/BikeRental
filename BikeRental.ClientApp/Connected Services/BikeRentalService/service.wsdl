@@ -4,6 +4,7 @@
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import namespace="http://tempuri.org/" />
       <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/BikeRental.Data.Entities" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IBikeRentalService_AddUser_InputMessage">
@@ -48,6 +49,48 @@
   <wsdl:message name="IBikeRentalService_AddRepairOrder_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddRepairOrderResponse" />
   </wsdl:message>
+  <wsdl:message name="IBikeRentalService_AddRepair_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddRepair" />
+  </wsdl:message>
+  <wsdl:message name="IBikeRentalService_AddRepair_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddRepairResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBikeRentalService_GetAllBikes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBikes" />
+  </wsdl:message>
+  <wsdl:message name="IBikeRentalService_GetAllBikes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBikesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBikeRentalService_GetAllRents_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllRents" />
+  </wsdl:message>
+  <wsdl:message name="IBikeRentalService_GetAllRents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllRentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBikeRentalService_GetAllRepairOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllRepairOrders" />
+  </wsdl:message>
+  <wsdl:message name="IBikeRentalService_GetAllRepairOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllRepairOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBikeRentalService_GetAllRepairs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllRepairs" />
+  </wsdl:message>
+  <wsdl:message name="IBikeRentalService_GetAllRepairs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllRepairsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBikeRentalService_GetRentsByUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRentsByUser" />
+  </wsdl:message>
+  <wsdl:message name="IBikeRentalService_GetRentsByUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRentsByUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBikeRentalService_GetRepairOrdersByBike_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRepairOrdersByBike" />
+  </wsdl:message>
+  <wsdl:message name="IBikeRentalService_GetRepairOrdersByBike_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRepairOrdersByBikeResponse" />
+  </wsdl:message>
   <wsdl:portType name="IBikeRentalService">
     <wsdl:operation name="AddUser">
       <wsdl:input wsaw:Action="http://tempuri.org/IBikeRentalService/AddUser" message="tns:IBikeRentalService_AddUser_InputMessage" />
@@ -76,6 +119,34 @@
     <wsdl:operation name="AddRepairOrder">
       <wsdl:input wsaw:Action="http://tempuri.org/IBikeRentalService/AddRepairOrder" message="tns:IBikeRentalService_AddRepairOrder_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IBikeRentalService/AddRepairOrderResponse" message="tns:IBikeRentalService_AddRepairOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddRepair">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBikeRentalService/AddRepair" message="tns:IBikeRentalService_AddRepair_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBikeRentalService/AddRepairResponse" message="tns:IBikeRentalService_AddRepair_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllBikes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBikeRentalService/GetAllBikes" message="tns:IBikeRentalService_GetAllBikes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBikeRentalService/GetAllBikesResponse" message="tns:IBikeRentalService_GetAllBikes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRents">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBikeRentalService/GetAllRents" message="tns:IBikeRentalService_GetAllRents_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBikeRentalService/GetAllRentsResponse" message="tns:IBikeRentalService_GetAllRents_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRepairOrders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBikeRentalService/GetAllRepairOrders" message="tns:IBikeRentalService_GetAllRepairOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBikeRentalService/GetAllRepairOrdersResponse" message="tns:IBikeRentalService_GetAllRepairOrders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRepairs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBikeRentalService/GetAllRepairs" message="tns:IBikeRentalService_GetAllRepairs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBikeRentalService/GetAllRepairsResponse" message="tns:IBikeRentalService_GetAllRepairs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRentsByUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBikeRentalService/GetRentsByUser" message="tns:IBikeRentalService_GetRentsByUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBikeRentalService/GetRentsByUserResponse" message="tns:IBikeRentalService_GetRentsByUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRepairOrdersByBike">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBikeRentalService/GetRepairOrdersByBike" message="tns:IBikeRentalService_GetRepairOrdersByBike_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBikeRentalService/GetRepairOrdersByBikeResponse" message="tns:IBikeRentalService_GetRepairOrdersByBike_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IBikeRentalService" type="tns:IBikeRentalService">
@@ -136,6 +207,69 @@
     </wsdl:operation>
     <wsdl:operation name="AddRepairOrder">
       <soap:operation soapAction="http://tempuri.org/IBikeRentalService/AddRepairOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRepair">
+      <soap:operation soapAction="http://tempuri.org/IBikeRentalService/AddRepair" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllBikes">
+      <soap:operation soapAction="http://tempuri.org/IBikeRentalService/GetAllBikes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRents">
+      <soap:operation soapAction="http://tempuri.org/IBikeRentalService/GetAllRents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRepairOrders">
+      <soap:operation soapAction="http://tempuri.org/IBikeRentalService/GetAllRepairOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRepairs">
+      <soap:operation soapAction="http://tempuri.org/IBikeRentalService/GetAllRepairs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRentsByUser">
+      <soap:operation soapAction="http://tempuri.org/IBikeRentalService/GetRentsByUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRepairOrdersByBike">
+      <soap:operation soapAction="http://tempuri.org/IBikeRentalService/GetRepairOrdersByBike" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

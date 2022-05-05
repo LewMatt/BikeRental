@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace BikeRental.ClientApp
 {
-    public partial class Form2 : Form
+    public partial class FormRegister : Form
     {
         BikeRentalService.BikeRentalServiceClient client = new BikeRentalService.BikeRentalServiceClient();
-        public Form2()
+        public FormRegister()
         {
             InitializeComponent();
         }
