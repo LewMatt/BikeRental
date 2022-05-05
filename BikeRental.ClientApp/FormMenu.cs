@@ -123,7 +123,7 @@ namespace BikeRental.ClientApp
                 userControlBorrowed1.listView1.Items.Add(item);
             }
 
-
+            userControlBorrowed1.userID = UserID;
 
             userControlBorrowed1.BringToFront();
         }

@@ -51,6 +51,7 @@
             this.columnHeaderID,
             this.columnHeaderPrice,
             this.columnHeaderExp});
+            this.listView1.FullRowSelect = true;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(55, 88);
             this.listView1.Name = "listView1";
