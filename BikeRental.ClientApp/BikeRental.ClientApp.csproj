@@ -164,6 +164,21 @@
     <EmbeddedResource Include="UserControlFixesAdmin.resx">
       <DependentUpon>UserControlFixesAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Connected Services\BikeRentalService\BikeRental.ClientApp.BikeRentalService.Bikes.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BikeRentalService\BikeRental.ClientApp.BikeRentalService.Rents.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BikeRentalService\BikeRental.ClientApp.BikeRentalService.RepairOrders.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BikeRentalService\BikeRental.ClientApp.BikeRentalService.Repairs.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BikeRentalService\BikeRental.Data.Entities.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\BikeRentalService\service.wsdl" />
     <None Include="Connected Services\BikeRentalService\service.xsd">
       <SubType>Designer</SubType>

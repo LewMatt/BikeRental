@@ -31,11 +31,11 @@ namespace BikeRental.Service
             bikeRentalRepository.AddBike(brand, model, type, color, price);
         }
 
-        public void AddRent(int userID, int bikeID)
+        public string AddRent(int userID, int bikeID)
         {
             IBikeRentalRepository bikeRentalRepository = new BikeRentalRepository();
 
-            bikeRentalRepository.AddRent(userID, bikeID);
+            return bikeRentalRepository.AddRent(userID, bikeID);
         }
 
         public int GetUserID(string login)
@@ -64,6 +64,48 @@ namespace BikeRental.Service
             IBikeRentalRepository bikeRentalRepository = new BikeRentalRepository();
 
             bikeRentalRepository.AddRepair(repairOrderID, userID, bikeID, details, state, overallPrice);
+        }
+
+        public IEnumerable<Bikes> GetAllBikes()
+        {
+            IBikeRentalRepository bikeRentalRepository = new BikeRentalRepository();
+
+            return bikeRentalRepository.GetAllBikes();
+        }
+
+        public IEnumerable<Rents> GetAllRents()
+        {
+            IBikeRentalRepository bikeRentalRepository = new BikeRentalRepository();
+
+            return bikeRentalRepository.GetAllRents();
+        }
+
+        public IEnumerable<RepairOrders> GetAllRepairOrders()
+        {
+            IBikeRentalRepository bikeRentalRepository = new BikeRentalRepository();
+
+            return bikeRentalRepository.GetAllRepairOrders();
+        }
+
+        public IEnumerable<Repairs> GetAllRepairs()
+        {
+            IBikeRentalRepository bikeRentalRepository = new BikeRentalRepository();
+
+            return bikeRentalRepository.GetAllRepairs();
+        }
+
+        public IEnumerable<Rents> GetRentsByUser(int userID)
+        {
+            IBikeRentalRepository bikeRentalRepository = new BikeRentalRepository();
+
+            return bikeRentalRepository.GetRentsByUser(userID);
+        }
+
+        public IEnumerable<RepairOrders> GetRepairOrdersByBike(int bikeID)
+        {
+            IBikeRentalRepository bikeRentalRepository = new BikeRentalRepository();
+
+            return bikeRentalRepository.GetRepairOrdersByBike(bikeID);
         }
     }
 }

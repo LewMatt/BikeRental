@@ -137,7 +137,7 @@ namespace BikeRental.Data.Repositories
             return numberOfRents;
         }
 
-        public void AddRent(int userID, int bikeID)
+        public string AddRent(int userID, int bikeID)
         {
 
             int numberOfRents = GetNumberOfRents();
@@ -153,22 +153,32 @@ namespace BikeRental.Data.Repositories
             {
                 Bikes bike = context.Bikes.Single(b => b.BikeID == bikeID);
 
-                bike.IsAvailable = 0;
-
-                var rent = new Rents
+                if(bike.IsAvailable != 0)
                 {
-                   RentID = numberOfRents,
-                   UserID = userID,
-                   BikeID = bikeID,
-                   Price = bike.Price,
-                   ExpirationDate = returnDateStr
-                };
+                    bike.IsAvailable = 0;
+
+                    var rent = new Rents
+                    {
+                        RentID = numberOfRents,
+                        UserID = userID,
+                        BikeID = bikeID,
+                        Price = bike.Price,
+                        ExpirationDate = returnDateStr
+                    };
 
 
-                context.Rents.Add(rent);
+                    context.Rents.Add(rent);
 
 
-                context.SaveChanges();
+                    context.SaveChanges();
+
+                    return "Wypozyczono rower.";
+                }
+                else
+                {
+                    return "Rower został już wypożyczony.";
+                }
+
             }
         }
 
@@ -264,5 +274,56 @@ namespace BikeRental.Data.Repositories
             }
         }
 
+        public IEnumerable<Bikes>GetAllBikes()
+        {
+            using (var context = _bikeRentalContext ?? new BikeRentalContext())
+            {
+                return context.Bikes.ToList();
+            }
+        }
+
+        public IEnumerable<Rents>GetAllRents()
+        {
+            using (var context = _bikeRentalContext ?? new BikeRentalContext())
+            {
+                return context.Rents.ToList();
+            }
+        }
+
+        public IEnumerable<RepairOrders> GetAllRepairOrders()
+        {
+            using (var context = _bikeRentalContext ?? new BikeRentalContext())
+            {
+                return context.RepairOrders.ToList();
+            }
+        }
+
+        public IEnumerable<Repairs> GetAllRepairs()
+        {
+            using (var context = _bikeRentalContext ?? new BikeRentalContext())
+            {
+                return context.Repairs.ToList();
+            }
+        }
+
+        public IEnumerable<Rents> GetRentsByUser(int userID)
+        {
+            using (var context = _bikeRentalContext ?? new BikeRentalContext())
+            {
+                return context.Rents
+                    .Where(r => r.UserID == userID)
+                    .ToList();
+            }
+        }
+
+        public IEnumerable<RepairOrders> GetRepairOrdersByBike(int bikeID)
+        {
+            using (var context = _bikeRentalContext ?? new BikeRentalContext())
+            {
+                return context.RepairOrders
+                    .Where(r => r.BikeID == bikeID)
+                    .ToList();
+            }
+        }
     }
 }
