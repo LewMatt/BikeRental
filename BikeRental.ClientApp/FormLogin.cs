@@ -40,6 +40,7 @@ namespace BikeRental.ClientApp
                 this.Hide();
                 FormMenu fMenu = new FormMenu();
                 fMenu.UserID = client.GetUserID(login);
+             
                 fMenu.Show();
             }
             else

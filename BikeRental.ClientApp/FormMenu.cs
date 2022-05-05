@@ -46,6 +46,8 @@ namespace BikeRental.ClientApp
                 userControlCatalog1.listViewCatalog.Items.Add(item);
             }
 
+            userControlCatalog1.userID = UserID;
+
             userControlCatalog1.BringToFront();
         }
 
@@ -91,6 +93,8 @@ namespace BikeRental.ClientApp
             {
                 userControlCatalog1.listViewCatalog.Items.Add(item);
             }
+
+            userControlCatalog1.userID = UserID;
 
             userControlCatalog1.BringToFront();
         }
