@@ -35,6 +35,7 @@
             this.columnHeaderType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderColor = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderAvailable = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderBikeID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // label1
@@ -49,6 +50,7 @@
             // listView1
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeaderBikeID,
             this.columnHeaderBrand,
             this.columnHeaderModel,
             this.columnHeaderType,
@@ -75,17 +77,22 @@
             // columnHeaderType
             // 
             this.columnHeaderType.Text = "Typ";
-            this.columnHeaderType.Width = 100;
+            this.columnHeaderType.Width = 59;
             // 
             // columnHeaderColor
             // 
             this.columnHeaderColor.Text = "Kolor";
-            this.columnHeaderColor.Width = 135;
+            this.columnHeaderColor.Width = 74;
             // 
             // columnHeaderAvailable
             // 
             this.columnHeaderAvailable.Text = "Dostępność";
             this.columnHeaderAvailable.Width = 79;
+            // 
+            // columnHeaderBikeID
+            // 
+            this.columnHeaderBikeID.Text = "Nr Roweru";
+            this.columnHeaderBikeID.Width = 85;
             // 
             // UserControlCatalogAdmin
             // 
@@ -109,5 +116,6 @@
         private System.Windows.Forms.ColumnHeader columnHeaderType;
         private System.Windows.Forms.ColumnHeader columnHeaderColor;
         private System.Windows.Forms.ColumnHeader columnHeaderAvailable;
+        private System.Windows.Forms.ColumnHeader columnHeaderBikeID;
     }
 }
